@@ -1,0 +1,83 @@
+.control
+  position: relative
+  overflow: hidden
+  cursor: pointer
+  font-size: 14px
+  line-height: 1.1em
+  display: inline-block
+
+  .control__input[disabled] + .control__text:after
+    border-color: #979797
+    background-color: #eee
+
+.control__text
+  position: relative
+  padding-left: 18px
+
+  &:after, &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 50%
+    z-index: 1
+    box-sizing: border-box
+    background-color: #fff
+
+  &:before
+    z-index: 2
+
+.control__input
+  position: absolute
+  left -999em
+  opacity: 0
+  width: 0
+  height: 0
+
+.control_type_checkbox
+  min-height: 12px
+
+  .control__text
+    color: #979797
+
+    &:after
+      content: ''
+      width: 12px
+      height: 12px
+      border: 1px solid #979797
+      border-radius: 2px
+      margin: -6px 0 0 0
+
+  .control__input:checked + .control__text
+    color: $color_text
+    
+    &:before
+      content: ''
+      width: 6px
+      height: 6px
+      margin: -3px 0 0 3px
+      background-color: $color_link
+
+.control_type_radio
+  min-height: 14px
+
+  .control__text
+    color: #979797
+
+    &:after
+      content: ''
+      width: 14px
+      height: 14px
+      border: 1px solid #979797
+      border-radius: 50%
+      margin: -7px 0 0 0
+
+  .control__input:checked + .control__text
+    color: $color_text
+
+    &:before
+      content: ''
+      width: 6px
+      height: 6px
+      margin: -3px 0 0 4px
+      border-radius: 50%
+      background-color: $color_link

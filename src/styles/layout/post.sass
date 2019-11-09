@@ -1,0 +1,118 @@
+.post
+  font-size: 16px
+  line-height: 1.5em
+
+  &:after, &:before
+    content: ''
+    display: table
+    clear: both
+
+  a
+    color: $color_link
+    text-decoration: underline
+
+    &:hover
+      text-decoration: none
+
+  p, ul, ol, h1, h2, h3, h4, h5, h6, q, blockquote, hr, table
+    margin: 0 0 33px 0
+
+    &:last-child
+      margin-bottom: 0
+
+  em, i
+    font-style: italic
+
+  strong, b
+    font-weight: bold
+
+  img
+    max-width: 100%
+
+    &[align="left"]
+      margin: 0 20px 33px 0
+
+    &[align="right"]
+      margin: 0 0 33px 20px
+
+  hr
+    border-style: none
+
+  blockquote, q
+    padding: 0 0 0 57px
+    display: block
+    font-style: italic
+
+  h1, h2, h3, h4, h5, h6
+    line-height: 1.2em
+    font-weight: bold
+
+  h1
+    font-size: 36px
+
+  h2
+    font-size: 24px
+
+  h3
+    font-size: 20px
+
+  h4
+    font-size: 18px
+
+  h5
+    font-size: 16px
+
+  h6
+    font-size: 14px
+
+  table
+    border: 1px solid #979797
+
+  th
+    border: 1px solid #979797
+    padding: 6px 9px
+    text-align: inherit
+
+  td
+    border: 1px solid #979797
+    padding: 6px 9px
+
+  li
+    position: relative
+    padding-left: 16px
+    margin-bottom: 5px
+
+  ul li
+    &:before
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      width: 4px
+      height: 4px
+      transform: translateY(-50%)
+
+  ol
+    counter-reset: item
+    
+    li:before
+      content: counters(item,".") ". "
+      counter-increment: item
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+
+@media screen and (max-width: $width_mobile)
+
+  h1
+    font-size: 30px
+
+  h2
+    font-size: 18px
+
+  h3
+    font-size: 18px
+
+  h4
+    font-size: 18px
