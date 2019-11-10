@@ -1,0 +1,72 @@
+.topbar, .topbar__row
+  min-height: 50px
+
+.topbar__fixed
+  background-color: #000
+  color: #fff
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  z-index: 100
+
+.topbar__row
+  display: flex
+  align-items: center
+
+.topbar__cell_type_beacon
+  flex: 0 0 68px
+
+.topbar__cell_type_logo
+  flex: 1
+  text-align: center
+
+.topbar__cell_type_loc
+  flex: 0 0 300px
+  margin-right: 40px
+
+.topbar__cell_type_navi
+  flex: 1
+  margin-right: 40px
+
+.topbar__cell_type_search
+  flex: 0 0 200px
+  margin-right: 40px
+
+.topbar__link_overflow_yes
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+  max-width: 250px
+
+.topbar__link
+  display: inline-block
+  vertical-align: middle
+  font-size: 15px
+  line-height: 18px
+  cursor: pointer
+  color: #fff
+  text-decoration: none
+  transition: all linear 0.2s
+
+  &:hover
+    color: $color_link
+    text-decoration: none
+
+.topbar__icon-prepend, .topbar__icon-append
+  display: inline-block
+  vertical-align: middle
+  color: $color_link
+
+.topbar__icon-prepend
+  font-size: 16px
+  margin-right: 4px
+
+.topbar__icon-append
+  font-size: 10px
+
+.topbar__navi
+  display: flex
+
+.topbar__navi-i:not(:last-child)
+  margin: 0 18px 0 0

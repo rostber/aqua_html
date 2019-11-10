@@ -1,0 +1,48 @@
+.search
+  display: block
+  background-color: #3E4042
+  padding: 0 35px 0 10px
+  position: relative
+  border-radius: 4px
+
+.search_type_mobile
+  position: absolute
+  right: 45px
+  left: 45px
+  top: 9px
+  visibility: hidden
+  opacity: 0
+  transition: all 0.2s 0s linear
+  z-index: 110
+
+.search_state_show
+  visibility: visible
+  opacity: 1
+
+.search:hover .search__icon, .search__input:focus + .search__icon
+  opacity: 1
+
+.search__input
+  display: block
+  width: 100%
+  outline-style: none
+  box-sizing: border-box
+  background-color: transparent
+  color: #fff
+  padding: 0
+  border-style: none
+  font-size: 14px
+  line-height: 30px
+  font-family: $font-body
+
+.search__icon
+  display: flex
+  align-items: center
+  position: absolute
+  right: 10px
+  top: 0
+  bottom: 0
+  font-size: 18px
+  color: #FBFBFB
+  opacity: 0.5
+  transition: opacity linear 0.2s

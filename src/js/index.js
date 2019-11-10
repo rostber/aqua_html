@@ -7,6 +7,7 @@ require('@fancyapps/fancybox/dist/jquery.fancybox');
 $(function() {
   init_zoom();
   select();
+  toggle();
 })
 
 function init_zoom() {
@@ -19,6 +20,38 @@ function select() {
       allowClear: true,
       minimumResultsForSearch: -1,
       placeholder: $(this).attr('placeholder')
+    });
+  });
+}
+
+function toggle() {
+  $(document).on('click.toggle', function(e) {
+    $('.js-toggle[data-outer-click]').each(function() {
+      var $el = $(this);
+      var actCl = $el.data('class');
+      var $block = $($el.data('toggle'));
+      if ($(e.target).closest($block).length == 0) $block.removeClass(actCl);
+    })
+  });
+
+  $('.js-toggle').each(function() {
+    var $el = $(this);
+    var actCl = $el.data('class');
+    var $block = $($el.data('toggle'));
+    $el.click(function(e) {
+      e.stopPropagation();
+      $block.toggleClass(actCl);
+      var groupName = $el.data('group');
+      if (groupName) {
+        $('.js-toggle').filter(function() {
+          return $(this).data('group') === groupName && $(this).data('toggle') !== $el.data('toggle')
+        }).each(function() {
+          var $elSecond = $(this);
+          var $blockSecond = $($elSecond.data('toggle'));
+          var actCl = $elSecond.data('class');
+          $blockSecond.removeClass(actCl);
+        });
+      }
     });
   });
 }
