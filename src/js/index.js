@@ -13,6 +13,7 @@ $(function() {
     elHandler: '.js-m-i-handler',
     elI: '.js-m-i'
   });
+  slider();
 })
 
 function init_zoom() {
@@ -65,5 +66,22 @@ function naviDrop(options) {
   $(options.elHandler).click(function() {
     $(options.elI).removeClass(options.currentClass)
     $(this).parents(options.elI).addClass(options.currentClass)
+  });
+}
+
+function slider() {
+  $('.js-slider').each(function() {
+    $(this).find('.js-slider-list').slick({
+      speed: 500,
+      centerMode: false,
+      centerPadding: 0,
+      variableWidth: false,
+      infinite: false,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      prevArrow: $(this).find('.js-slider-prev'),
+      nextArrow: $(this).find('.js-slider-next')
+    });
   });
 }

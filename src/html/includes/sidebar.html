@@ -1,9 +1,9 @@
 <div class="page__sidebar">
   <div class="navbar navbar_type_sidebar">
 
-    <% ['Пресноводная аквариумистика', 'Террариумистика', 'Морская аквариумистика', 'Пруд', 'Бассейны', 'Полив и орошение'].forEach(function(i) { %>
+    <% ['Пресноводная аквариумистика', 'Террариумистика', 'Морская аквариумистика', 'Пруд', 'Бассейны', 'Полив и орошение'].forEach(function(i, k) { %>
 
-      <div class="navbar__i js-m-i">
+      <div class="navbar__i <%= k == 0 ? 'navbar__i_state_current' : '' %> js-m-i">
         <div class="navbar__handler navbar__handler_type_main navbar__handler_type_drop2 js-m-i-handler">
           <%= i %>
         </div>
