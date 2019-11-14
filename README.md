@@ -1,6 +1,6 @@
 # Aqua html
 
-Design: https://www.figma.com/file/UmFI8rQ6ckRCe3uagOCYOI/Aqua_mall_v10?node-id=78%3A873
+Design: https://www.figma.com/file/ChWIcZD2HjEkom5qGnbpAU/Aqua_mall_v12?node-id=0%3A1
 
 Build:
 
