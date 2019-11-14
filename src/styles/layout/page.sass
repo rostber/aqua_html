@@ -6,15 +6,25 @@
   box-sizing: border-box
 
 .page__columns
-  display: flex
   position: relative
+  width: 100%
+  overflow: hidden
+
+  &:after, &:before
+    clear: both
+    content: ''
+    display: table
 
 .page__sidebar
-  flex: 0 0 300px
-  margin-right: 50px
+  width: 300px
+  margin-right: 40px
+  float: left
+
+.page__sidebar_shift_yes
+  margin-top: -132px
 
 .page__content
-  flex: 1
+  overflow: hidden
 
 @media screen and (max-width: $width_mobile)
 

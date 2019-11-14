@@ -14,6 +14,7 @@ $(function() {
     elI: '.js-m-i'
   });
   slider();
+  oSlider();
 })
 
 function init_zoom() {
@@ -83,5 +84,24 @@ function slider() {
       prevArrow: $(this).find('.js-slider-prev'),
       nextArrow: $(this).find('.js-slider-next')
     });
+  });
+}
+
+function oSlider() {
+  $('.js-o-slider').each(function() {
+    $(this).find('.js-o-slider-list').slick({
+      speed: 500,
+      adaptiveHeight: true,
+      prevArrow: $(this).find('.js-o-slider-prev'),
+      nextArrow: $(this).find('.js-o-slider-next'),
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: 'unslick'
+        }
+      ]
+    })
   });
 }

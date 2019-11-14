@@ -1,0 +1,46 @@
+<div class="section js-o-slider">
+  <div class="section__head">
+    <div class="section__title">
+      Хиты продаж
+    </div>
+    <div class="section__action">
+      <div class="arrows">
+        <div class="arrows__prev js-o-slider-prev">
+          <i class="icon-arrow-left"></i>
+        </div>
+        <div class="arrows__next js-o-slider-next">
+          <i class="icon-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="o-slider js-o-slider-list">
+
+    <% for(i = 0; i < 5; i++) { %>
+
+      <div class="o-slider__i">
+        <div class="offer">
+          <a class="offer__picture-link" href="#">
+            <img src="/uploads/offer.jpg" alt="" class="offer__picture-src" />
+          </a>
+          <div class="offer__content">
+            <div class="offer__name">
+              <a class="offer__link" href="#">Аквариум Aquael GLOSSY 120 (260 л)</a>
+            </div>
+            <div class="offer__price">
+              24 980 руб.
+            </div>
+          </div>
+          <div class="offer__action">
+            <button class="btn">
+              <i class="icon-cart btn__icon"></i>
+              В корзину
+            </button>
+          </div>
+        </div>
+      </div>
+
+    <% } %>
+
+  </div>
+</div>
