@@ -1,20 +1,22 @@
 <div class="topbar">
   <div class="topbar__fixed">
     <div class="page__center">
-
       <div class="topbar__row">
+
         <div class="topbar__cell topbar__cell_type_beacon display-mobile">
           <div class="topbar-act">
             <div class="topbar-act__i">
-              <span class="topbar-act__link">
+              <span class="topbar-act__link js-toggle" data-outer-click="true" data-toggle=".js-m-header" data-class="m-header_state_show">
                 <i class="icon-beacon"></i>
               </span>
             </div>
           </div>
         </div>
+
         <div class="topbar__cell topbar__cell_type_logo display-mobile">
           <img src="../img/logo_mobile.svg" alt="" class="topbar__logo" />
         </div>
+
         <div class="topbar__cell topbar__cell_type_loc display-desktop">
           <i class="topbar__icon-prepend icon-point"></i>
           <span class="topbar__link topbar__link_overflow_yes">
@@ -22,6 +24,7 @@
           </span>
           <i class="topbar__icon-append icon-down"></i>
         </div>
+
         <div class="topbar__cell topbar__cell_type_navi display-desktop">
           <ul class="topbar__navi">
             <li class="topbar__navi-i">
@@ -52,6 +55,7 @@
             </li>
           </ul> 
         </div>
+
         <div class="topbar__cell topbar__cell_type_action display-mobile">
           <div class="topbar-act">
             <div class="topbar-act__i">
@@ -74,6 +78,7 @@
             </div>
           </div>
         </div>
+
         <div class="topbar__cell topbar__cell_type_search display-desktop">
           <form action="#" class="search">
             <label>
@@ -84,18 +89,184 @@
             </label>
           </form>
         </div>
+
         <div class="topbar__cell topbar__cell_type_auth display-desktop">
           <i class="topbar__icon-prepend icon-user"></i>
           <a href="#" class="topbar__link">
             Войти в аккаунт
           </a>
         </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="header display-desktop">
+  <div class="page__center">
+    <div class="header__row">
+
+      <div class="header__cell header__cell_type_logo">
+        <a href="#" class="header__logo-link">
+          <img src="../img/logo.png" alt="" class="header__logo-picture" />
+        </a>
+      </div>
+
+      <div class="header__cell header__cell_type_action">
+        <button class="btn btn_nowrap_yes">
+          <i class="icon-beacon btn__icon"></i>
+          <span class="btn__inside">
+            Каталог товаров
+          </span>
+        </button>
+      </div>
+
+      <div class="header__cell header__cell_type_contacts">
+        <div class="contacts">
+          <div class="contacts__row">
+            <div class="contacts__i">
+              <div class="contacts__label">Москва</div>
+              <div class="contacts__phone">
+                <div class="contacts__phone-icon">
+                  <span class="icon-phone"></span>
+                </div>
+                8 (499) 281-62-18
+              </div>
+            </div>
+            <div class="contacts__i">
+              <div class="contacts__label">Санкт-Петербург</div>
+              <div class="contacts__phone">
+                <div class="contacts__phone-icon">
+                  <span class="icon-phone"></span>
+                </div>
+                8 (812) 425-60-02
+              </div>
+            </div>
+          </div>
+          <div class="contacts__text">
+            время работы магазина — пн-пт с 09:00 до 19:00
+          </div>
+        </div>
+      </div>
+
+      <div class="header__cell header__cell_type_cart">
+        <% if (false && Boolean(Math.round(Math.random()))) { %>
+        <div class="s-cart">
+          <div class="s-cart__action">
+            <a href="#" class="btn btn_size_22" disabled="disabled">
+              <i class="icon-cart"></i>
+            </a>
+          </div>
+          <div class="s-cart__content">
+            В корзине<br />
+            нет товаров
+          </div>
+        </div>
+        <% } else { %>
+        <div class="s-cart">
+          <div class="s-cart__action">
+            <a href="#" class="btn btn_size_22">
+              <i class="icon-cart"></i>
+            </a>
+          </div>
+          <div class="s-cart__content">
+            28 товаров<br />
+            на <b class="s-cart__cost">23 800 руб.</b>
+          </div>
+        </div>
+        <% } %>
       </div>
 
     </div>
   </div>
 </div>
 
-<div class="header">
-
+<div class="m-header m-header_state_show js-m-header display-mobile">
+  <div class="m-header__list">
+    <div class="m-header__i">
+      <div class="m-header__text">
+        <a href="#">Вход</a>
+        |
+        <a href="#">Регистрация</a>
+      </div>
+    </div>
+    <div class="m-header__i js-m-i">
+      <div class="m-header__handler js-m-i-handler">
+        Каталог товаров
+      </div>
+      <div class="m-header__child-list">
+        <div class="m-header__i js-m-i">
+          <div class="m-header__handler js-m-i-handler">
+            Каталог вложенный
+          </div>
+          <div class="m-header__child-list">
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Пресноводная аквариумистика
+              </a>
+            </div>
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Аквариумы
+              </a>
+            </div>
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Тумбы
+              </a>
+            </div>
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Фильтрация
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="m-header__i js-m-i">
+          <div class="m-header__handler js-m-i-handler">
+            Террариумистика
+          </div>
+          <div class="m-header__child-list">
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Пресноводная аквариумистика
+              </a>
+            </div>
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Пруд
+              </a>
+            </div>
+            <div class="m-header__i m-header__i_type_child js-m-i">
+              <a href="#" class="m-header__handler m-header__handler_type_link">
+                Бассейны
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="m-header__i js-m-i">
+      <div class="m-header__handler js-m-i-handler">
+        Террариумистика
+      </div>
+      <div class="m-header__child-list">
+        <div class="m-header__i m-header__i_type_child js-m-i">
+          <a href="#" class="m-header__handler m-header__handler_type_link">
+            Пресноводная аквариумистика
+          </a>
+        </div>
+        <div class="m-header__i m-header__i_type_child js-m-i">
+          <a href="#" class="m-header__handler m-header__handler_type_link">
+            Пруд
+          </a>
+        </div>
+        <div class="m-header__i m-header__i_type_child js-m-i">
+          <a href="#" class="m-header__handler m-header__handler_type_link">
+            Бассейны
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

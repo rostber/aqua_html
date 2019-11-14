@@ -8,21 +8,48 @@
 .btn
   display: inline-block
   color: #fff
-  background-color: #D8D8D8
-  font-size: 18px
-  line-height: 22px
-  padding: 10px 20px
+  background-color: $color_link
+  border: 2px solid $color_link
+  border-radius: 4px
+  font-size: 16px
+  line-height: 19px
+  padding: 13px 20px
   outline-style: none
   text-align: center
-  border-style: none
   cursor: pointer
   box-sizing: border-box
   user-select: none
   text-decoration: none
-  border-radius: 3px
-  min-width: 156px
   transition: all linear 0.1s
 
-  &:hover
-    box-shadow: 0 4px 4px rgba(red(#D8D8D8), green(#D8D8D8), blue(#D8D8D8), 0.25)
+  &:not([disabled])
 
+    &:hover
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1)
+
+    &:active
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2)
+
+  &[disabled]
+    background-color: #fff
+    cursor: default
+    color: $color_link
+
+.btn_nowrap_yes
+  white-space: nowrap
+
+.btn_size_22
+  font-size: 22px
+
+.btn__icon
+  font-size: 20px
+
+  &:first-child
+    margin-right: 5px
+
+  &:last-child
+    margin-left: 5px
+
+.btn__icon, .btn__inside
+  display: inline-block
+  vertical-align: middle

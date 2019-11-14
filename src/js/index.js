@@ -8,6 +8,7 @@ $(function() {
   init_zoom();
   select();
   toggle();
+  mNavi();
 })
 
 function init_zoom() {
@@ -53,5 +54,13 @@ function toggle() {
         });
       }
     });
+  });
+}
+
+function mNavi() {
+  var currentClass = 'm-header__i_state_current'
+  $('.js-m-i-handler').click(function() {
+    $('.js-m-i').removeClass(currentClass)
+    $(this).parents('.js-m-i').addClass(currentClass)
   });
 }
