@@ -8,7 +8,11 @@ $(function() {
   init_zoom();
   select();
   toggle();
-  mNavi();
+  naviDrop({
+    currentClass: 'navbar__i_state_current',
+    elHandler: '.js-m-i-handler',
+    elI: '.js-m-i'
+  });
 })
 
 function init_zoom() {
@@ -57,10 +61,9 @@ function toggle() {
   });
 }
 
-function mNavi() {
-  var currentClass = 'm-header__i_state_current'
-  $('.js-m-i-handler').click(function() {
-    $('.js-m-i').removeClass(currentClass)
-    $(this).parents('.js-m-i').addClass(currentClass)
+function naviDrop(options) {
+  $(options.elHandler).click(function() {
+    $(options.elI).removeClass(options.currentClass)
+    $(this).parents(options.elI).addClass(options.currentClass)
   });
 }

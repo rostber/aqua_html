@@ -10,76 +10,9 @@
   right: 0
   bottom: 0
   background-color: #fff
+  z-index: 100
 
 .m-header_state_show
   visibility: visible
   height: auto
   opacity: 1
-
-.m-header__list, .m-header__child-list
-  border-top: 1px solid #1E2328
-
-.m-header__i
-  font-size: 16px
-
-  &:not(:last-child)
-    border-bottom: 1px solid #1E2328
-
-.m-header__i_type_child
-  font-size: 16px
-
-.m-header__handler, .m-header__link, .m-header__text
-  position: relative
-  padding: 15px 20px
-  line-height: 1.2em
-  transition: all linear 0.2s
-
-.m-header__i_state_current > .m-header__handler, .m-header__handler:hover, .m-header__link:hover
-  background-color: $color_link
-  color: #fff
-
-.m-header__i_state_current 
-  > .m-header__child-list
-    display: block
-
-  > .m-header__handler
-
-    &:after
-      display: block
-
-    &:before
-      display: none
-
-.m-header__child-list
-  display: none
-
-.m-header__handler
-  cursor: pointer
-  display: block
-
-  &:after, &:before
-    content: ''
-    position: absolute
-    right: 20px
-    top: 50%
-    margin-top: -9px
-    font-size: 14px
-    font-family: 'icons'
-
-  &:after
-    content: "\e90a"
-    display: none
-
-  &:before
-    content: "\e910"
-    display: block
-
-.m-header__handler_type_link
-  color: $color_link
-  text-decoration: none
-
-  &:after, &:before
-    display: none
-
-  &:hover
-    text-decoration: none

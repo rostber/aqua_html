@@ -1,0 +1,46 @@
+<div class="page__sidebar">
+  <div class="navbar navbar_type_sidebar">
+
+    <% ['Пресноводная аквариумистика', 'Террариумистика', 'Морская аквариумистика', 'Пруд', 'Бассейны', 'Полив и орошение'].forEach(function(i) { %>
+
+      <div class="navbar__i js-m-i">
+        <div class="navbar__handler navbar__handler_type_main navbar__handler_type_drop2 js-m-i-handler">
+          <%= i %>
+        </div>
+        <div class="navbar__child-list">
+          
+          <% ['Аквариумы', 'Тумбы', 'Фильтрация', 'Освещение', 'Терморегуляция', 'Грунты и декорации', 'Аэрация', 'Водоподготовка и СО2', 'Кормление', 'Аксессуары', 'Аквариумная химия', 'Запчасти', 'Рыбки, креветки, раки, улитки', 'Аквариумные растения'].forEach(function(iChild) { %>
+
+            <div class="navbar__i js-m-i">
+              <div class="navbar__handler navbar__handler_type_drop2 js-m-i-handler">
+                <%= iChild %>
+              </div>
+              <div class="navbar__child-list">
+                <div class="navbar__i js-m-i">
+                  <a href="#" class="navbar__handler navbar__handler_type_link">
+                    Пресноводная аквариумистика
+                  </a>
+                </div>
+                <div class="navbar__i js-m-i">
+                  <a href="#" class="navbar__handler navbar__handler_type_link">
+                    Пресноводная аквариумистика 2
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          <% }) %>
+
+          <div class="navbar__i js-m-i">
+            <a href="#" class="navbar__handler navbar__handler_type_link">
+              Пресноводная аквариумистика
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    <% }) %>
+
+  </div>
+</div>

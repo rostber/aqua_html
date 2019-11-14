@@ -1,5 +1,20 @@
 <%= _.template(require('./../includes/head.html'))() %>
 <%= _.template(require('./../includes/header.html'))() %>
 
+<div class="page__center">
+
+  <div class="page__columns">
+
+    <%= _.template(require('./../includes/sidebar.html'))() %>
+
+    <div class="page__content">
+      
+
+
+    </div>
+  </div>
+
+</div>
+
 <%= _.template(require('./../includes/assets.html'))(data) %>
 <%= _.template(require('./../includes/footer.html'))(data) %>
