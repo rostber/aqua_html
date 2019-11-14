@@ -28,3 +28,18 @@
   &:hover
     text-decoration: underline
     color: $color_link
+
+@media screen and (max-width: $width_mobile)
+
+  .footer
+    text-align: center
+
+  .footer__cell_type_2, .footer__cell_type_3
+    display: none
+
+  .footer__row
+    flex-direction: column-reverse
+    margin: 0
+
+  .footer__cell
+    padding: 10px 0
