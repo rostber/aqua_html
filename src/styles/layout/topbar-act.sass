@@ -2,12 +2,9 @@
   display: flex
   align-items: center
 
-.topbar-act__i:not(:last-child)
-  margin-right: 12px
-
 .topbar-act__link
   cursor: pointer
-  font-size: 18px
+  font-size: 16px
   display: inline-block
   padding: 0 5px
   color: #FBFBFB
@@ -30,3 +27,13 @@
   &:hover
     color: #fff
     text-decoration: none
+
+@media screen and (max-width: $width_sm)
+
+  .topbar-act__link
+
+    &:first-child
+      padding-left: 5px
+
+    &:last-child
+      padding-right: 5px

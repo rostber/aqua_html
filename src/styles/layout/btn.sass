@@ -53,3 +53,21 @@
 .btn__icon, .btn__inside
   display: inline-block
   vertical-align: middle
+
+@media screen and (max-width: $width_sm)
+
+  .btn
+    font-size: 14px
+    padding: 8px 5px
+
+  .btn__icon
+
+    &:first-child
+      margin-right: 0
+
+    &:last-child
+      margin-left: 0
+
+  .btn_type_offer
+    display: inline-block
+    width: 100%
