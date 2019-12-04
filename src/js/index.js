@@ -4,6 +4,9 @@ import 'slick-carousel';
 window.$ = window.jQuery = $;
 require('@fancyapps/fancybox/dist/jquery.fancybox');
 
+const widthMd = 1270
+const widthSm = 768
+
 $(function() {
   init_zoom();
   select();
@@ -98,7 +101,14 @@ function oSlider() {
       slidesToScroll: 4,
       responsive: [
         {
-          breakpoint: 1200,
+          breakpoint: widthMd,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+          }
+        },
+        {
+          breakpoint: widthSm,
           settings: 'unslick'
         }
       ]

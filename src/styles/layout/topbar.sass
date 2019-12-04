@@ -15,7 +15,8 @@
   align-items: center
 
 .topbar__cell_type_beacon
-  flex: 0 0 68px
+  flex: 0 0 20px
+  margin-right: 20px
 
 .topbar__cell_type_logo
   flex: 1
@@ -59,7 +60,7 @@
   color: $color_link
 
 .topbar__icon-prepend
-  font-size: 12px
+  font-size: 16px
   margin-right: 4px
 
 .topbar__icon-append
@@ -68,3 +69,15 @@
 .topbar__navi
   display: flex
   justify-content: space-around
+
+@media screen and (max-width: $width_md)
+
+  .topbar__cell_type_loc
+    flex: 1
+
+  .topbar__cell_type_search
+    flex: 0 0 180px
+    margin-right: 30px
+
+  .topbar__cell_type_auth
+    flex: 0 0 180px

@@ -1,13 +1,21 @@
-.display-mobile
+.display-sm, .display-md
   display: none
 
-.display-desktop
+.display-lg
   display: block
 
-@media screen and (max-width: $width_mobile)
+@media screen and (max-width: $width_md)
 
-  .display-mobile
+  .display-lg, .display-sm
+    display: none
+
+  .display-md
     display: block
 
-  .display-desktop
+@media screen and (max-width: $width_sm)
+
+  .display-lg, .display-md
     display: none
+
+  .display-sm
+    display: block

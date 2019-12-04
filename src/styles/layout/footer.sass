@@ -10,6 +10,7 @@
   margin: 0 -10px
 
 .footer__cell
+  flex: 1
   padding: 0 10px
   box-sizing: border-box
 
@@ -29,13 +30,15 @@
     text-decoration: underline
     color: $color_link
 
-@media screen and (max-width: $width_mobile)
+@media screen and (max-width: $width_md)
+
+  .footer__cell
+    padding: 10px
+
+@media screen and (max-width: $width_sm)
 
   .footer
     text-align: center
-
-  .footer__cell_type_2, .footer__cell_type_3
-    display: none
 
   .footer__row
     flex-direction: column-reverse
