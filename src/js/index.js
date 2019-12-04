@@ -94,8 +94,8 @@ function oSlider() {
       adaptiveHeight: true,
       prevArrow: $(this).find('.js-o-slider-prev'),
       nextArrow: $(this).find('.js-o-slider-next'),
-      slidesToShow: 3,
-      slidesToScroll: 3,
+      slidesToShow: 4,
+      slidesToScroll: 4,
       responsive: [
         {
           breakpoint: 1200,

@@ -2,11 +2,10 @@
   font-family: 'SF UI Display';
   font-style: normal;
   font-weight: normal;
-  src:  url('../fonts/SFUIDisplay-Medium.eot');
-  src:  url('../fonts/SFUIDisplay-Medium.eot#iefix') format('embedded-opentype'),
-    url('../fonts/SFUIDisplay-Medium.ttf') format('truetype'),
-    url('../fonts/SFUIDisplay-Medium.woff') format('woff'),
-    url('../fonts/SFUIDisplay-Medium.svg?') format('svg');
+  src:  url('../fonts/SFUIDisplay-Regular.eot');
+  src:  url('../fonts/SFUIDisplay-Regular.eot#iefix') format('embedded-opentype'),
+    url('../fonts/SFUIDisplay-Regular.ttf') format('truetype'),
+    url('../fonts/SFUIDisplay-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -16,8 +15,7 @@
   src:  url('../fonts/SFUIDisplay-Bold.eot');
   src:  url('../fonts/SFUIDisplay-Bold.eot#iefix') format('embedded-opentype'),
     url('../fonts/SFUIDisplay-Bold.ttf') format('truetype'),
-    url('../fonts/SFUIDisplay-Bold.woff') format('woff'),
-    url('../fonts/SFUIDisplay-Bold.svg?') format('svg');
+    url('../fonts/SFUIDisplay-Bold.woff') format('woff');
 }
 
 
