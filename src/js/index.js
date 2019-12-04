@@ -47,10 +47,12 @@ function toggle() {
   $('.js-toggle').each(function() {
     var $el = $(this);
     var actCl = $el.data('class');
+    var handlCl = $el.data('handler-class');
     var $block = $($el.data('toggle'));
     $el.click(function(e) {
       e.stopPropagation();
       $block.toggleClass(actCl);
+      $(this).toggleClass(handlCl);
       var groupName = $el.data('group');
       if (groupName) {
         $('.js-toggle').filter(function() {
