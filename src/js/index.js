@@ -52,7 +52,7 @@ function toggle() {
     $el.click(function(e) {
       e.stopPropagation();
       $block.toggleClass(actCl);
-      $(this).toggleClass(handlCl);
+      if (handlCl) $(this).toggleClass(handlCl);
       var groupName = $el.data('group');
       if (groupName) {
         $('.js-toggle').filter(function() {

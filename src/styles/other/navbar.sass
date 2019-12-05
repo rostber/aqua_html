@@ -21,11 +21,13 @@
   .navbar__handler_type_main
     border-color: #3c9f40
 
-.navbar__handler
-  cursor: pointer
+.navbar__handler, .navbar__text
   display: block
   font-size: 15px
-  border-bottom: 1px solid #1E2328
+  border-bottom: 1px solid #ccc
+
+.navbar__handler
+  cursor: pointer
 
   &:after, &:before
     content: ''
@@ -44,6 +46,7 @@
 
   &:before
     content: "\e910"
+    font-size: 16px
     display: block
 
 .navbar__handler_type_drop2
@@ -75,7 +78,7 @@
 .navbar__i
   font-size: 16px
 
-.navbar__handler, .navbar__text
+.navbar__handler, .navbar__text, .navbar__footer
   position: relative
   padding: 15px 10px 15px 15px
   line-height: 1.2em

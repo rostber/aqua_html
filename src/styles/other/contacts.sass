@@ -1,3 +1,15 @@
+.contacts_type_drop
+
+  .contacts__i:not(:last-child)
+    margin-bottom: 16px
+
+  .contacts__label
+    font-size: 15px
+    margin-bottom: 5px
+
+  .contacts__phone
+    font-size: 18px
+
 .contacts__row
   display: flex
 
@@ -30,3 +42,32 @@
   line-height: 20px
   background-color: #F2F2F2
   color: $color_link
+
+.contacts__address
+  position: relative
+  margin: 10px 0
+
+.contacts__address-icon
+  position: absolute
+  left: -28px
+  top: 50%
+  margin-top: -10px
+  color: $color_link
+  font-size: 16px
+
+.contacts__address-link
+  font-size: 14px
+  line-height: 17px
+  cursor: pointer
+  text-decoration: none
+  transition: all linear 0.2s
+  color: $color_text
+
+  &:hover
+    color: $color_link
+    text-decoration: none
+
+.contacts__timework
+  font-size: 13px
+  line-height: 18px
+  color: $color_hint
