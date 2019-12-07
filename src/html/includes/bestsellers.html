@@ -1,7 +1,10 @@
+<%
+var items = ['offer1.jpg', 'offer2.jpg', 'offer3.jpg', 'offer4.jpg']
+%>
 <div class="section js-o-slider">
   <div class="section__head">
     <div class="section__title">
-      Хиты продаж
+      <%= title %>
     </div>
     <div class="section__action">
       <div class="arrows">
@@ -21,7 +24,7 @@
       <div class="o-slider__i">
         <div class="offer">
           <a class="offer__picture-link" href="#">
-            <img src="/uploads/offer.jpg" alt="" class="offer__picture-src" />
+            <img src="/uploads/<%= items[Math.floor(Math.random()*items.length)] %>" alt="" class="offer__picture-src" />
           </a>
           <div class="offer__content">
             <div class="offer__name">

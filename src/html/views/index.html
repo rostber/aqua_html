@@ -7,12 +7,12 @@
 
   <div class="page__columns">
 
-    <%= _.template(require('./../includes/sidebar.html'))() %>
+    <%= _.template(require('./../includes/sidebar.html'))({shift: true}) %>
 
     <div class="page__content">
 
-      <%= _.template(require('./../includes/bestsellers.html'))() %>
-      <%= _.template(require('./../includes/best_categories.html'))() %>
+      <%= _.template(require('./../includes/bestsellers.html'))({title: 'Хиты продаж'}) %>
+      <%= _.template(require('./../includes/best_categories.html'))({title: 'Популярные категории'}) %>
       <%= _.template(require('./../includes/about.html'))() %>
 
     </div>

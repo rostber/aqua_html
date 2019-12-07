@@ -1,0 +1,29 @@
+.bc
+  margin-bottom: 20px
+  font-size: 0
+  border-bottom: 1px solid rgba(141, 141, 141, 0.3)
+  padding-bottom: 13px
+
+.bc__i
+  display: inline-block
+  font-size: 14px
+  line-height: 26px
+  margin-right: 26px
+  color: $color_hint
+  position: relative
+
+  &:not(:last-child):after
+    content: "\e916"
+    position: absolute
+    right: -16px
+    top: 50%
+    margin-top: -13px
+    font-family: 'icons'
+    font-size: 12px
+
+.bc__link
+  color: $color_blink
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
