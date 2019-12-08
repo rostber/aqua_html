@@ -21,7 +21,20 @@ $(function() {
   slider();
   oSlider();
   rangeSlider();
+  toggleList();
 })
+
+function toggleList() {
+  $('.js-list').each(function() {
+    var $el = $(this);
+    $el.find('.js-list-i').filter(function(i) { return i > 4 }).hide()
+    $el.find('.js-list-handler').click(function() {
+      $(this).hide();
+      $el.find('.js-list-i').slideDown();
+    })
+  })
+}
+
 
 function rangeSlider() {
   $('.js-range-slide').each(function() {

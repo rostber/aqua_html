@@ -29,8 +29,20 @@
 
     <div class="filter__section">
       <div class="filter__title">Производитель</div>
-      <div class="filter__content">
+      <div class="filter__content js-list">
         
+        <% for(const i of ['ADA', 'Aqua One', 'Aquael', 'Atman', 'Dennerle', 'Aqua One', 'Aquael', 'Atman', 'Dennerle']) { %>
+          <div class="filter__control js-list-i">
+            <label class="control control_type_checkbox">
+              <input type="checkbox" name="field" value="1" class="control__input" /><span class="control__text">
+                <%= i %>
+              </span>
+            </label>
+          </div>
+        <% } %>
+
+        <div class="filter__control-toggle js-list-handler">Показать все</div>
+
       </div>
     </div>
 

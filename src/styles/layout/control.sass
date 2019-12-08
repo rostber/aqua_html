@@ -2,8 +2,8 @@
   position: relative
   overflow: hidden
   cursor: pointer
-  font-size: 14px
-  line-height: 1.1em
+  font-size: 15px
+  line-height: 20px
   display: inline-block
 
   .control__input[disabled] + .control__text:after
@@ -12,7 +12,8 @@
 
 .control__text
   position: relative
-  padding-left: 18px
+  padding-left: 32px
+  color: $color_blink
 
   &:after, &:before
     content: ''
@@ -21,7 +22,6 @@
     top: 50%
     z-index: 1
     box-sizing: border-box
-    background-color: #fff
 
   &:before
     z-index: 2
@@ -34,40 +34,42 @@
   height: 0
 
 .control_type_checkbox
-  min-height: 12px
+  min-height: 20px
 
   .control__text
-    color: #979797
 
     &:after
       content: ''
-      width: 12px
-      height: 12px
-      border: 1px solid #979797
-      border-radius: 2px
-      margin: -6px 0 0 0
+      width: 20px
+      height: 20px
+      box-sizing: border-box
+      border: 1px solid #DADADA
+      background-color: #fff
+      border-radius: 4px
+      margin: -10px 0 0 0
 
   .control__input:checked + .control__text
     color: $color_text
     
     &:before
-      content: ''
-      width: 6px
-      height: 6px
-      margin: -3px 0 0 3px
-      background-color: $color_link
+      content: "\e909"
+      margin: -9px 0 0 5px
+      color: $color_link
+      font-family: $icons
+      font-size: 12px
 
 .control_type_radio
-  min-height: 14px
+  min-height: 20px
 
   .control__text
-    color: #979797
 
     &:after
       content: ''
-      width: 14px
-      height: 14px
-      border: 1px solid #979797
+      width: 20px
+      height: 20px
+      box-sizing: border-box
+      border: 1px solid #DADADA
+      background-color: #fff
       border-radius: 50%
       margin: -7px 0 0 0
 
