@@ -9,18 +9,17 @@
 
   <div class="page__columns">
 
-    <%= _.template(require('./../includes/sidebar.html'))({shift: false}) %>
+    <%= _.template(require('./../includes/filter.html'))() %>
 
     <div class="page__content">
 
       <div class="display-lg display-md">
         <%= _.template(require('./../includes/bc.html'))() %>
       </div>
-      <%= _.template(require('./../includes/best_categories.html'))({title: 'Фильтрация'}) %>
-      <%= _.template(require('./../includes/bestsellers.html'))({title: 'Популярные товары'}) %>
+      <%= _.template(require('./../includes/offers.html'))() %>
 
     </div>
-
+  
   </div>
 
 </div>

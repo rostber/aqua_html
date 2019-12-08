@@ -1,0 +1,42 @@
+<div class="section js-list">
+  <div class="section__head">
+    <div class="section__title">
+      Внешние фильтры
+    </div>
+  </div>
+</div>
+
+<%
+var items = ['offer1.jpg', 'offer2.jpg', 'offer3.jpg', 'offer4.jpg']
+%>
+<div class="section">
+  <div class="list">
+
+    <% for(i = 0; i < 20; i++) { %>
+
+      <div class="list__i">
+        <div class="offer">
+          <a class="offer__picture-link" href="#">
+            <img src="/uploads/<%= items[Math.floor(Math.random()*items.length)] %>" alt="" class="offer__picture-src" />
+          </a>
+          <div class="offer__content">
+            <div class="offer__name">
+              <a class="offer__link" href="#">Аквариум Aquael GLOSSY 120 (260 л)</a>
+            </div>
+            <div class="offer__price">
+              24 980 руб.
+            </div>
+          </div>
+          <div class="offer__action">
+            <button class="btn btn_type_offer">
+              <i class="icon-cart btn__icon"></i>
+              В корзину
+            </button>
+          </div>
+        </div>
+      </div>
+
+    <% } %>
+
+  </div>
+</div>

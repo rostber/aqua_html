@@ -7,11 +7,11 @@ var items = ['offer1.jpg', 'offer2.jpg', 'offer3.jpg', 'offer4.jpg']
       <%= title %>
     </div>
   </div>
-  <div class="b-categories">
+  <div class="list">
 
     <% for(i = 0; i < 5; i++) { %>
 
-      <div class="b-categories__i">
+      <div class="list__i">
         <div class="offer offer_type_category">
           <a class="offer__picture-link" href="#">
             <img src="/uploads/<%= items[Math.floor(Math.random()*items.length)] %>" alt="" class="offer__picture-src" />

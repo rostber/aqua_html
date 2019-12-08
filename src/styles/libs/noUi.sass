@@ -1,0 +1,31 @@
+.noUi-target
+  margin-bottom: 10px
+
+.noUi-connect
+  background-color: $color_link
+
+.noUi-horizontal
+  height: 2px
+  border-style: none
+
+  .noUi-handle
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2)
+    cursor: pointer
+    right: -10px
+    top: -10px
+
+    &:before
+      display: none
+
+    &:after
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background-color: $color_link
+      position: absolute
+      left: 50%
+      top: 50%
+      margin: -3px 0 0 -3px

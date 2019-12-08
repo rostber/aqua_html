@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import 'select2';
 import 'slick-carousel';
+import noUiSlider from 'nouislider';
+import wNumb from './wNumb';
 window.$ = window.jQuery = $;
 require('@fancyapps/fancybox/dist/jquery.fancybox');
 
@@ -18,7 +20,55 @@ $(function() {
   });
   slider();
   oSlider();
+  rangeSlider();
 })
+
+function rangeSlider() {
+  $('.js-range-slide').each(function() {
+    var $el = $(this);
+    var $elDrag = $(this).find('.js-range-slide-drag');
+    var $elFrom = $el.find('.js-range-slide-from');
+    var $elTo = $el.find('.js-range-slide-to');
+    var min = parseInt($el.data('min'));
+    var max = parseInt($el.data('max'));
+    var slider = noUiSlider.create($elDrag[0], {
+      start: [$elFrom.val(), $elTo.val()],
+      connect: true,
+      tooltips: false,
+      step: 1,
+      range: {
+        'min': min,
+        'max': max
+      }
+    });
+    slider.on('change', function() {
+      var range = slider.get();
+      $elFrom.val(range[0]);
+      $elTo.val(range[1]);
+    });
+
+    var change = function() {
+      var nFrom = parseInt($elFrom.val());
+      var nTo = parseInt($elTo.val());
+
+      if (nFrom > max) nFrom = max;
+      if (nFrom < min || isNaN(nFrom)) nFrom = min;
+
+      if (nTo > max || isNaN(nTo)) nTo = max;
+      if (nTo < min) nTo = min;
+
+      if (nFrom > nTo) nTo = nFrom;
+
+      $elFrom.val(nFrom);
+      $elTo.val(nTo);
+
+      slider.set([$elFrom.val(), $elTo.val()])
+    }
+
+    $elFrom.on('change', change);
+    $elTo.on('change', change);
+  });
+}
 
 function init_zoom() {
   $('.js-modal').fancybox();
