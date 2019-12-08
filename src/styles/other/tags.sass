@@ -1,0 +1,37 @@
+.tags
+  display: flex
+
+.tags__label
+  flex: 0
+  font-size: 16px
+  line-height: 23px
+  padding: 7px 30px 0 0
+  font-weight: bold
+  margin-bottom: 15px
+
+.tags__list
+  flex: 1
+  font-size: 0
+
+.tags__i
+  font-size: 15px
+  line-height: 28px
+  border: 1.4px solid #C9C9C9
+  box-sizing: border-box
+  border-radius: 4px
+  color: #C9C9C9
+  display: inline-block
+  transition: all linear 0.2s
+  text-decoration: none
+  padding: 5px 14px
+  margin: 0 10px 10px 0
+
+  &:hover
+    color: $color_text
+    border-color: $color_text
+    text-decoration: none
+
+@media screen and (max-width: $width_sm)
+
+  .tags
+    display: block

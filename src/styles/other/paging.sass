@@ -1,0 +1,37 @@
+.paging__row
+  display: flex
+
+.paging__prev, .paging__next
+  flex: 0
+  white-space: nowrap
+
+.paging__prev
+  text-align: left
+
+.paging__list
+  flex: 1
+  text-align: center
+  font-size: 0
+
+.paging__next
+  text-align: right
+
+.paging__link, .paging__active
+  font-size: 20px
+  line-height: 20px
+  text-decoration: none
+  padding: 15px 20px
+  border-radius: 4px
+  transition: all linear 0.2s
+  display: inline-block
+
+.paging__link
+  color: $color_blink
+
+  &:hover
+    text-decoration: underline
+
+.paging__active
+  text-decoration: none
+  background-color: $color_link
+  color: #fff
