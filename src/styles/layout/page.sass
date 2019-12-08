@@ -24,10 +24,44 @@
 .page__content
   overflow: hidden
 
+.page__title
+  text-align: center
+  font-size: 26px
+  line-height: 1.2em
+  font-weight: bold
+  margin-bottom: 20px
+
 @media screen and (max-width: $width_md)
 
   .page__content
     overflow: visible
+
+  .page__sidebar_type_filter
+    display: none
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    z-index: 100
+    background-color: #fff
+    width: auto
+    float: none
+    margin: 0
+    overflow: hidden
+    overflow-y: auto
+    padding: 10px 0
+
+  .page__close
+    cursor: pointer
+    position: absolute
+    right: 20px
+    top: 20px
+    font-size: 20px
+    color: $color_hint
+
+  .page__sidebar_type_filter-opened
+    display: block
 
 @media screen and (max-width: $width_sm)
 
@@ -36,6 +70,9 @@
 
   .page__sidebar
     display: none
+
+  .page__sidebar_type_filter-opened
+    display: block
 
   .page__sidebar_shift_yes
     margin-top: 0

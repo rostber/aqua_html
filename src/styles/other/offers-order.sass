@@ -1,0 +1,46 @@
+.offers-order
+  display: flex
+  align-items: center
+  background-color: #F2F2F2
+  border-radius: 4px
+  padding: 15px 20px
+
+.offers-order__count
+  flex: 0
+  font-size: 15px
+  line-height: 18px
+  white-space: nowrap
+
+.offers-order__form
+  flex: 1
+  text-align: right
+  font-size: 0
+
+.offers-order__cell
+  font-size: 15px
+  line-height: 18px
+  display: inline-block
+  vertical-align: middle
+  margin-left: 15px
+  text-align: left
+
+.offers-order__cell_type_num
+  width: 80px
+
+.offers-order__cell_type_type
+  width: 240px
+
+@media screen and (max-width: $width_md)
+
+  .offers-order
+    padding: 0
+    border-style: none
+    background-color: transparent
+
+  .offers-order__count, .offers-order__cell
+    display: none
+
+  .offers-order__cell_type_type
+    display: block
+    margin: 0
+    width: auto

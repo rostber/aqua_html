@@ -9,22 +9,44 @@ select
 .select2-container--default
 
   .select2-selection--single
-    border: 1px solid #979797
-    border-radius: 2px
+    border: 1px solid #DADADA
+    border-radius: 4px
 
   &.select2-container--open
 
     .select2-selection--single
-      border-color: $color_link
+      border-color: #DADADA
 
 .select2-dropdown
-  border-color: $color_link
+  border-color: #DADADA
 
 .select2-container--default .select2-selection--single .select2-selection__rendered
-  line-height: 35px
+  line-height: 40px
 
-.select2-container .select2-selection--single
-  height: 35px
+.select2-container--default .select2-selection--single .select2-selection__arrow, .select2-container .select2-selection--single
+  height: 40px
 
-.select2-container--default .select2-selection--single .select2-selection__arrow
-  height: 35px
+.select2_size_sm
+  font-size: 14px
+
+  &.select2-container--default .select2-selection--single .select2-selection__arrow, &.select2-container .select2-selection--single
+    height: 30px
+
+  &.select2-container--default .select2-selection--single .select2-selection__rendered
+    line-height: 30px
+
+@media screen and (max-width: $width_md)
+
+  .select2_type_offers-order
+    font-size: 16px
+
+    &.select2-container--default .select2-selection--single .select2-selection__arrow, &.select2-container .select2-selection--single
+      height: 50px
+
+    &.select2-container--default .select2-selection--single .select2-selection__rendered
+      line-height: 50px
+      padding-left: 20px
+      padding-right: 40px
+
+    &.select2-container--default .select2-selection--single .select2-selection__arrow
+      right: 20px

@@ -90,7 +90,8 @@ function init_zoom() {
 function select() {
   $('select').each(function() {
     $(this).select2({
-      allowClear: true,
+      theme: 'default ' + $(this).prop('class'),
+      allowClear: false,
       minimumResultsForSearch: -1,
       placeholder: $(this).attr('placeholder')
     });
@@ -112,7 +113,8 @@ function toggle() {
     var actCl = $el.data('class');
     var handlCl = $el.data('handler-class');
     var $block = $($el.data('toggle'));
-    $el.click(function(e) {
+    var $secondHandler = $($el.data('handler'));
+    var handler = function(e) {
       e.stopPropagation();
       $block.toggleClass(actCl);
       if (handlCl) $(this).toggleClass(handlCl);
@@ -127,7 +129,9 @@ function toggle() {
           $blockSecond.removeClass(actCl);
         });
       }
-    });
+    }
+    $el.click(handler);
+    if ($secondHandler.length) $secondHandler.click(handler);
   });
 }
 
