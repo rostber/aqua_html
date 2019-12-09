@@ -3,6 +3,7 @@ import 'select2';
 import 'slick-carousel';
 import noUiSlider from 'nouislider';
 import wNumb from './wNumb';
+import Tooltip from 'tooltip.js';
 window.$ = window.jQuery = $;
 require('@fancyapps/fancybox/dist/jquery.fancybox');
 
@@ -23,6 +24,7 @@ $(function() {
   rangeSlider();
   toggleList();
   offerPictures();
+  tooltip();
 })
 
 function offerPictures() {
@@ -197,5 +199,20 @@ function oSlider() {
         }
       ]
     })
+  });
+}
+
+function tooltip() {
+  $('[data-tooltip]').each(function() {
+    var $el = $(this);
+    var position = $el.data('tooltip-position') || 'top';
+    var text = $el.data('tooltip');
+    var contentSelector = $el.data('tooltip-el');
+    if (contentSelector) text = $(contentSelector).html();
+    new Tooltip($el, {
+      placement: position,
+      title: text,
+      html: true
+    });
   });
 }

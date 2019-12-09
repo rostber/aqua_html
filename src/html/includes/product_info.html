@@ -59,7 +59,7 @@ const list = [
       <div class="offer-info__cart-profit">
         Начислим
         <a href="#" class="link offer-info__cart-profit-value">150 аквабаллов</a>
-        <span class="info" title="Test">
+        <span class="info" data-tooltip="Доставка по Москве осуществляется при сумме заказа от 300 руб. Подъем на этаж оплачивается отдельно! Оплата производится наличными по факту курьеру. Для юридических лиц действует 100% предоплата на р/с.">
           <i class="icon-info"></i>
         </span>
       </div>
@@ -83,7 +83,16 @@ const list = [
       </span>
     </div>
     <div class="offer-info__text">
-      <a href="#" class="link">Подробнее про условия доставки</a>
+      <a href="#" class="link" data-tooltip data-tooltip-el=".js-hint">
+        Подробнее про условия доставки
+      </a>
+      <div class="tooltip hidden js-hint">
+        <div class="tooltip__title">Доставка</div>
+        Доставка по Москве осуществляется 
+        при сумме заказа от 300 руб. Подъем на этаж оплачивается отдельно!
+        Оплата производится наличными по факту курьеру. Для юридических лиц 
+        действует 100% предоплата на р/с.
+      </div>
     </div>
 
   <% } else { %>

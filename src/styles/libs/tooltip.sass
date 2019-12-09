@@ -1,0 +1,115 @@
+.tooltip
+  background: #fff
+  color: $color_text
+  border: 1px solid $color_hint
+  padding: 20px 30px
+  text-align: left
+  font-size: 14px
+  line-height: 24px
+  z-index: 1000
+  max-width: 330px
+  box-sizing: border-box
+  font-weight: normal
+  border-radius: 4px
+
+.tooltip__title
+  font-size: 18px
+  font-weight: bold
+  margin-bottom: 3px
+
+.tooltip .tooltip-arrow
+  margin: 5px
+  position: absolute
+  width: 0
+  height: 0
+
+  &:after, &:before
+    content: ''
+    width: 0
+    height: 0
+    border-style: solid
+    position: absolute
+    left: 0
+    top: 0
+
+  &:after
+    border-color: #fff
+
+  &:before
+    border-color: $color_hint
+
+.tooltip[x-placement^="top"]
+  margin-bottom: 5px
+
+.tooltip[x-placement^="top"] .tooltip-arrow
+  bottom: 0
+  left: 50%
+  margin-top: 0
+  margin-bottom: 0
+
+  &:after, &:before
+    border-width: 5px 5px 0 5px
+    border-left-color: transparent
+    border-right-color: transparent
+    border-bottom-color: transparent
+    transform: translateX(-50%)
+
+  &:before
+    top: 1px
+
+.tooltip[x-placement^="bottom"]
+  margin-top: 5px
+
+.tooltip[x-placement^="bottom"] .tooltip-arrow
+  top: -5px
+  left: 50%
+  margin-top: 0
+  margin-bottom: 0
+
+  &:after, &:before
+    border-width: 0 5px 5px 5px
+    border-left-color: transparent
+    border-right-color: transparent
+    border-top-color: transparent
+    transform: translateX(-50%)
+
+  &:before
+    top: -1px
+
+.tooltip[x-placement^="right"]
+  margin-left: 5px
+
+.tooltip[x-placement^="right"] .tooltip-arrow
+  left: -5px
+  top: 50%
+  margin-left: 0
+  margin-right: 0
+
+  &:after, &:before
+    border-width: 5px 5px 5px 0
+    border-left-color: transparent
+    border-top-color: transparent
+    border-bottom-color: transparent
+    transform: translateY(-50%)
+
+  &:before
+    right: 1px
+
+.tooltip[x-placement^="left"]
+  margin-right: 5px
+
+.tooltip[x-placement^="left"] .tooltip-arrow
+  right: 0
+  top: 50%
+  margin-left: 0
+  margin-right: 0
+
+  &:after, &:before
+    border-width: 5px 0 5px 5px
+    border-top-color: transparent
+    border-right-color: transparent
+    border-bottom-color: transparent
+    transform: translateY(-50%)
+
+  &:before
+    left: 1px
