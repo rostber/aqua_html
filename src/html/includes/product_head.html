@@ -1,0 +1,23 @@
+<% const existReviews = Boolean(Math.round(Math.random())) %>
+<div class="offer-head">
+  <div class="offer-head__code">Арт.: Tet-240926</div>
+  <h1 class="offer-head__name">Фильтр внешний Tetra EX600 Plus (от 60 до 120 л)</h1>
+  <h1 class="offer-head__rate">
+    <div class="rate rate_value_<?= existReviews ? 4 : 0 ?>">
+      <div class="rate__list">
+        <i class="icon-star rate__i"></i>
+        <i class="icon-star rate__i"></i>
+        <i class="icon-star rate__i"></i>
+        <i class="icon-star rate__i"></i>
+        <i class="icon-star rate__i"></i>
+      </div>
+      <div class="rate__label">
+        <% if (existReviews) { %>
+          <a href="#" class="rate__link">82 отзыва</a>
+        <% } else { %>
+          <a href="#" class="rate__link">нет отзывов</a>
+        <% } %>
+      </div>
+    </div>
+  </h1>
+</div>

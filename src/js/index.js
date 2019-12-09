@@ -22,12 +22,27 @@ $(function() {
   oSlider();
   rangeSlider();
   toggleList();
+  offerPictures();
 })
+
+function offerPictures() {
+  var display = function(index) {
+    $('.js-picture-preview').hide().eq(index).show()
+  }
+  var $elI = $('.offer-picture__i-preview');
+  if ($elI.length == 0) return;
+  $elI.on('click mouseenter', function() {
+    var index = $elI.index($(this));
+    display(index);
+  });
+  display(0);
+}
 
 function toggleList() {
   $('.js-list').each(function() {
     var $el = $(this);
-    $el.find('.js-list-i').filter(function(i) { return i > 4 }).hide()
+    var num = $el.data('qnt')
+    $el.find('.js-list-i').filter(function(i) { return i >= num }).hide()
     $el.find('.js-list-handler').click(function() {
       $(this).hide();
       $el.find('.js-list-i').slideDown();

@@ -1,0 +1,25 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="page__center">
+  <%= _.template(require('./../includes/bc.html'))() %>
+  <div class="display-md display-sm">
+    <%= _.template(require('./../includes/product_head.html'))() %>
+  </div>
+
+  <div class="offer-main">
+    <div class="offer-main__preview">
+      <%= _.template(require('./../includes/product_preview.html'))() %>
+    </div>
+    <div class="offer-main__info">
+      <div class="display-lg">
+        <%= _.template(require('./../includes/product_head.html'))() %>
+      </div>
+      <%= _.template(require('./../includes/product_info.html'))() %>
+    </div>
+  </div>
+
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+<%= _.template(require('./../includes/footer.html'))(data) %>

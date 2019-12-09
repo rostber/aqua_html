@@ -1,0 +1,107 @@
+<%
+const list = [
+  {
+    label: 'Производительность',
+    value: '600 л/час'
+  },
+  {
+    label: 'Объём канистры',
+    value: '5,7 л'
+  },
+  {
+    label: 'Высота подъёма воды',
+    value: '1,1 м'
+  },
+  {
+    label: 'Количество корзин',
+    value: '3'
+  },
+  {
+    label: 'Высота подъёма воды',
+    value: '1,1 м'
+  },
+  {
+    label: 'Количество корзин',
+    value: '3'
+  }
+]
+%>
+
+<div class="offer-props js-list" data-qnt="4">
+  <% for(const i of list) { %>
+    <div class="offer-props__i js-list-i">
+      <div class="offer-props__label"><%= i.label %></div>
+      <div class="offer-props__value"><%= i.value %></div>
+    </div>
+  <% } %>
+  <div class="offer-props__toggle js-list-handler">Все характеристики</div>
+</div>
+
+<div class="offer-info">
+
+  <div class="offer-info__cost">
+    <div class="offer-info__cost-value">5 030 руб.</div>
+    <div class="offer-info__cost-old-value">4 980 руб.</div>
+  </div>
+
+  <% if (true || Boolean(Math.round(Math.random()))) { %>
+
+    <div class="offer-info__avaliable offer-info__avaliable_color_green">
+      В наличии на складе
+    </div>
+    <div class="offer-info__cart">
+      <div class="offer-info__cart-btn">
+        <button class="btn btn_type_to-cart">
+          <i class="icon-cart btn__icon"></i>
+          В корзину
+        </button>
+      </div>
+      <div class="offer-info__cart-profit">
+        Начислим
+        <a href="#" class="link offer-info__cart-profit-value">150 аквабаллов</a>
+        <span class="info" title="Test">
+          <i class="icon-info"></i>
+        </span>
+      </div>
+    </div>
+    <div class="offer-info__text">
+      <span class="offer-info__hint">
+        Ваш город:
+      </span>
+      <span class="location">
+        <a class="location__link" href="#">Москва</a>
+        <i class="icon-down location__arrow"></i>
+      </span>
+    </div>
+    <div class="offer-info__text">
+      <span class="offer-info__hint">
+        Доставка
+      </span>
+      завтра, 27 сентября — 
+      <span class="offer-info__strong">
+        бесплатно
+      </span>
+    </div>
+    <div class="offer-info__text">
+      <a href="#" class="link">Подробнее про условия доставки</a>
+    </div>
+
+  <% } else { %>
+
+    <div class="offer-info__avaliable">
+      Товара нет в наличии
+    </div>
+    <div class="offer-info__cart">
+      <div class="offer-info__cart-btn">
+        <button class="btn btn_type_to-cart btn_color_orange">Сообщить о наличии</button>
+      </div>
+    </div>
+    <div class="offer-info__text">
+      <span class="offer-info__hint">
+        Товара сейчас нет в наличии, но вы можете оставить заявку и мы сообщим Вам о его поступлении. 
+      </span>
+    </div>
+
+  <% } %>
+
+</div>
