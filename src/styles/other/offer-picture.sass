@@ -4,25 +4,32 @@
 .offer-picture__list
   flex: 0 0 120px
   margin-right: 20px
+  font-size: 0
 
 .offer-picture__i
-  display: flex
-  align-items: center
-  justify-content: center
-  width: 120px
-  height: 120px
   background-color: #fff
   border-radius: 4px
   cursor: pointer
-  text-align: center
   transition: all linear 0.2s
   box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  text-decoration: none
+  display: block
+  vertical-align: top
 
   &:hover
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 
   &:not(:last-child)
     margin-bottom: 20px
+
+.offer-picture__i-content
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 120px
+  height: 120px
+  text-align: center
 
 .offer-picture__i-preview
   display: block
@@ -45,6 +52,8 @@
   background-color: #fff
   border-radius: 4px
   cursor: pointer
+  box-sizing: border-box
+  padding: 10px
 
 .offer-picture__i-text
   font-size: 14px
@@ -53,5 +62,33 @@
 
 .offer-picture__preview
   display: block
-  max-width: 95%
-  max-height: 95%
+  max-width: 100%
+  max-height: 100%
+
+@media screen and (max-width: $width_sm)
+
+  .offer-picture
+    flex-direction: column-reverse
+
+  .offer-picture__main
+    margin-bottom: 10px
+    height: 270px
+
+  .offer-picture__list
+    font-size: 0
+    text-align: center
+
+  .offer-picture__i
+    display: inline-block
+    margin-right: 5px
+
+  .offer-picture__i-content
+    width: 70px
+    height: 70px
+
+  .offer-picture__i-icon
+    font-size: 23px
+    margin: 0 auto 3px
+
+  .offer-picture__i-text
+    font-size: 13px

@@ -1,7 +1,14 @@
 <div class="section">
 
   <div class="offer-tabs">
-    <span class="offer-tabs__i">Описание и характеристики </span>
+    <span class="offer-tabs__i">
+      <span class="display-lg display-md">
+        Описание и характеристики
+      </span>
+      <span class="display-sm">
+        Описание
+      </span>
+    </span>
     <a class="offer-tabs__i offer-tabs__i_type_link" href="#">Отзывы (82)</a>
   </div>
 
@@ -32,8 +39,8 @@
         <% [['Производитель', 'Tetra'], ['Тип наполнителей', 'керамические кольца Tetra CR, био-губка Tetra BF, био-шарики Tetra BB, угольный наполнитель Tetra CF, фильтр очистки Tetra FF'], ['Для аквариума', '120 л ']].forEach(function(value, i) { %>
 
         <div class="offer-f-props__i <%= i % 2 == 0 ? 'offer-f-props__i_type_even' : '' %>">
-          <div class="offer-f-props__label"><%= i[0] %></div>
-          <div class="offer-f-props__value"><%= i[1] %></div>
+          <div class="offer-f-props__label"><%= value[0] %></div>
+          <div class="offer-f-props__value"><%= value[1] %></div>
         </div>
 
         <% }) %>
