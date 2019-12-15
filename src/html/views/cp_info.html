@@ -1,0 +1,46 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="page__center">
+  <%= _.template(require('./../includes/bc.html'))({list: ['Личный кабинет', 'Заказы']}) %>
+</div>
+
+<div class="page__center">
+
+  <div class="section">
+    <div class="section__head">
+      <h1 class="section__title section__title_size_big">
+        Учетная запись
+      </h1>
+    </div>
+
+    <div class="page__columns">
+      <div class="page__sidebar">
+        <%= _.template(require('./../includes/cp_sidebar.html'))(data) %>
+      </div>
+      <div class="page__content">
+
+        <div class="cb-info">
+          <div class="cb-info__title">Аквабаллы</div>
+          <div class="cb-info__profit">
+            <div class="cb-info__ico">
+              <i class="icon-drop"></i>
+            </div>
+            <div class="cb-info__value">
+              256 аквабаллов
+            </div>
+          </div>
+          <div class="cb-info__text post">
+            <p>Вы можете использовать их для оплаты заказа. Новые баллы можно заработать, оставляя комментарии о товаре, принимая участие в конкурсах, социальных сетях и еще множеством способов.</p>
+            <p>Подробнее про бонусную программу...</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+<%= _.template(require('./../includes/footer.html'))(data) %>
