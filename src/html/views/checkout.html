@@ -1,0 +1,31 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="page__center">
+  <%= _.template(require('./../includes/back.html'))({label: 'Вернуться в корзину'}) %>
+</div>
+
+<div class="page__center">
+
+  <div class="section">
+    <div class="section__head">
+      <h1 class="section__title section__title_size_big">
+        Оформление заказа
+      </h1>
+    </div>
+
+    <div class="order-columns">
+      <div class="order-columns__content">
+        <%= _.template(require('./../includes/checkout.html'))() %>
+      </div>
+      <div class="order-columns__sidebar">
+        <%= _.template(require('./../includes/order-info.html'))() %>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+<%= _.template(require('./../includes/footer.html'))(data) %>

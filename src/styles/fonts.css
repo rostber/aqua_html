@@ -46,13 +46,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .icon-minus:before {
   content: "\e917";
 }
 .icon-right:before {
   content: "\e916";
   color: #8d8d8d;
+}
+.icon-date:before {
+  content: "\e918";
 }
 .icon-search:before {
   content: "\e915";

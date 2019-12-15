@@ -5,21 +5,30 @@
   font-size: 15px
   line-height: 20px
   display: inline-block
+  user-select: none
 
   .control__input[disabled] + .control__text:after
     border-color: #979797
     background-color: #eee
 
+.control_type_checkout
+  font-size: 16px
+  line-height: 26px
+
+  .control__text
+    color: $color_text
+
 .control__text
   position: relative
   padding-left: 32px
   color: $color_blink
+  display: block
 
   &:after, &:before
     content: ''
     position: absolute
     left: 0
-    top: 50%
+    top: 0.7em
     z-index: 1
     box-sizing: border-box
 
@@ -77,8 +86,8 @@
 
     &:before
       content: ''
-      width: 6px
-      height: 6px
-      margin: -3px 0 0 4px
+      width: 10px
+      height: 10px
+      margin: -2px 0 0 5px
       border-radius: 50%
       background-color: $color_link

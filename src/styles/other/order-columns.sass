@@ -1,0 +1,20 @@
+.order-columns
+  display: flex
+
+.order-columns__content
+  flex: 1
+
+.order-columns__sidebar
+  flex: 0 0 300px
+  margin-left: 20px
+
+@media screen and (max-width: $width_md)
+
+  .order-columns
+    display: block
+
+  .order-columns__content
+    margin-bottom: 20px
+
+  .order-columns__sidebar
+    margin: 0

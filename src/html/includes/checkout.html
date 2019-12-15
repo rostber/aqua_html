@@ -1,0 +1,137 @@
+<div class="section section_border_yes">
+  <div class="section__head">
+    <h2 class="section__title">
+      Контакты
+    </h2>
+  </div>
+
+  <div class="f-row f-row_size_sm">
+    <div class="f-row__cell">
+      <div class="f-row__label">Телефон</div>
+      <input type="text" name="phone" class="input" />
+    </div>
+  </div>
+
+  <div class="f-row f-row_size_sm">
+    <div class="f-row__cell">
+      <div class="f-row__label">Имя</div>
+      <input type="text" name="name" class="input" />
+    </div>
+  </div>
+
+  <div class="f-row f-row_size_sm">
+    <div class="f-row__cell">
+      <div class="f-row__label">E-mail</div>
+      <input type="text" name="email" class="input" />
+    </div>
+  </div>
+
+  <div class="f-row f-row_size_sm">
+    <div class="f-row__cell">
+      <div class="f-row__label">Город</div>
+      <input type="text" name="city" class="input" />
+      <div class="f-row__hint">
+        например, <span class="f-row__hint-link">Москва</span> или <span class="f-row__hint-link">Санкт-Петербург</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="f-row f-row_size_sm">
+    <div class="f-row__cell">
+      <div class="f-row__label">Адрес</div>
+      <input type="text" name="address" class="input" />
+    </div>
+  </div>
+
+</div>
+
+<div class="section section_border_yes">
+  <div class="section__head">
+    <h2 class="section__title">
+      Способ и дата доставки
+    </h2>
+  </div>
+  <div class="f-row">
+    <div class="f-row__cell">
+      <div class="f-row__label">Способ доставки</div>
+      <label class="control control_type_radio control_type_checkout">
+        <input type="checkbox" name="delavery" value="1" class="control__input" /><span class="control__text">
+          Курьером, 199 руб.
+        </span>
+      </label>
+    </div>
+    <div class="f-row__cell">
+      <div class="f-row__label">Ближайшая дата доставки</div>
+      21.10.2019
+    </div>
+    <div class="f-row__cell">
+      <div class="f-row__label">Вы можете указать другую дату</div>
+      <div class="input-group">
+        <input type="text" name="delavery_at" class="input" value="22.10.2019" />
+        <div class="input-group__ico">
+          <i class="icon-date"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section_border_yes">
+  <div class="section__head">
+    <h2 class="section__title">
+      Способ оплаты
+    </h2>
+  </div>
+  <div class="f-row f-row_size_20">
+    <div class="f-row__cell">
+      <label class="control control_type_radio control_type_checkout">
+        <input type="radio" name="pay" value="1" class="control__input" checked="checked" /><span class="control__text">
+          Наличными
+        </span>
+      </label>
+    </div>
+    <div class="f-row__cell">
+      <label class="control control_type_radio control_type_checkout">
+        <input type="radio" name="pay" value="1" class="control__input" /><span class="control__text">
+          Банковской картой при получении
+        </span>
+      </label>
+    </div>
+  </div>
+  <div class="f-row f-row_size_20">
+    <div class="f-row__cell">
+      <label class="control control_type_radio control_type_checkout">
+        <input type="radio" name="pay" value="1" class="control__input" /><span class="control__text">
+          С помощью аквабаллов. Аквабалл = 1 рубль. Вы можете оплатить баллами не более 90% стоимости заказа.
+        </span>
+      </label>
+      <div class="points">
+        <div class="points__label">
+          Использовать (доступно 40 000):
+        </div>
+        <div class="points__value">
+          <input type="text" name="points" class="input input_error_yes" value="31200" />
+        </div>
+        <div class="points__error">
+          Сумма оплаты баллами более 90% стоимости заказа
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section_border_yes">
+
+  <div class="f-row">
+    <div class="f-row__cell">
+      <label class="control control_type_checkbox control_type_checkout">
+        <input type="checkbox" name="agree" value="1" class="control__input" checked="checked" /><span class="control__text">
+          Подтверждаю свое согласие на обработку и хранение моих персональных данных в соответствии с&nbsp;<a href="#" class="link link_color_black link_underline_yes" target="_blank">политикой&nbsp;конфенденциальности</a>
+        </span>
+      </label>
+    </div>
+  </div>
+
+  <button class="btn btn_size_big">Оформить заказ</button>
+
+</div>
