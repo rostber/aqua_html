@@ -18,7 +18,6 @@
     url('../fonts/SFUIDisplay-Bold.woff') format('woff');
 }
 
-
 @font-face {
   font-family: 'icons';
   src:  url('../fonts/icons.eot?gdi9ur');
@@ -46,6 +45,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-drop:before {
+  content: "\e919";
+}
 .icon-minus:before {
   content: "\e917";
 }
