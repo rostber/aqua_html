@@ -50,8 +50,37 @@
 .offer-info__strong
   color: $color_link
 
+.offer-info__cart-container
+  transition: bottom ease 0.3s
+  bottom: -50px
+
 @media screen and (max-width: $width_md)
 
   .offer-info__cart-btn, .offer-info__cart-profit
     display: block
     margin-bottom: 15px
+
+  .offer-info__cart-btn
+    min-height: 50px
+
+  .offer-info__cart-btn_type_fixed
+
+    .offer-info__cart-container
+      padding: 0 15px 10px 15px
+      position: fixed
+      left: 0
+      bottom: 0
+      right: 0
+      background-color: #fff
+      opacity: 1
+      z-index: 10
+
+      &:before
+        content: ''
+        background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%)
+        position: absolute
+        left: 0
+        bottom: 100%
+        right: 0
+        height: 30px
+

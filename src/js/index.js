@@ -25,6 +25,7 @@ $(function() {
   toggleList();
   offerPictures();
   tooltip();
+  fixedBtn();
 })
 
 function offerPictures() {
@@ -215,4 +216,18 @@ function tooltip() {
       html: true
     });
   });
+}
+
+function fixedBtn() {
+  var $el = $('.js-fixed-btn');
+  var h = $el.height()
+  var classFixed = 'offer-info__cart-btn_type_fixed';
+  var render = function() {
+    var top = $(window).scrollTop();
+    if ($el.offset().top < top - h) $el.addClass(classFixed);
+    else $el.removeClass(classFixed);
+  }
+  render();
+  $(window).on('scroll', render);
+  $(window).on('resize', render);
 }
