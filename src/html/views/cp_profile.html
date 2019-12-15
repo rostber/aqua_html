@@ -1,0 +1,56 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="page__center">
+  <%= _.template(require('./../includes/bc.html'))({list: ['Личный кабинет', 'Заказы']}) %>
+</div>
+
+<div class="page__center">
+
+  <div class="section">
+    <div class="section__head">
+      <h1 class="section__title section__title_size_big">
+        Учетная запись
+      </h1>
+    </div>
+
+    <div class="page__columns">
+      <div class="page__sidebar">
+        <%= _.template(require('./../includes/cp_sidebar.html'))(data) %>
+      </div>
+      <div class="page__content">
+        <div class="profile">
+          <div class="profile__title">Личные данные</div>
+          <div class="profile__prop">
+            <div class="profile__prop-label">ФИО</div>
+            <div class="profile__prop-value">Константинов Константин</div>
+          </div>
+          <div class="profile__prop">
+            <div class="profile__prop-label">E-mail</div>
+            <div class="profile__prop-value">konstantinov.konstantin@googlemail.com</div>
+          </div>
+          <div class="profile__prop">
+            <div class="profile__prop-label">Номер телефона</div>
+            <div class="profile__prop-value">+7 (926) 312-44-50</div>
+          </div>
+          <div class="profile__prop">
+            <div class="profile__prop-label">Дополнительный номер телефона</div>
+            <div class="profile__prop-value">+7 (968) 354-32-80</div>
+          </div>
+          <div class="profile__prop">
+            <div class="profile__prop-label">Дата рождения</div>
+            <div class="profile__prop-value">24.04.1976</div>
+          </div>
+          <div class="profile__prop">
+            <div class="profile__prop-label">Адрес</div>
+            <div class="profile__prop-value">119021, Москва, ул. Льва Толстого, 16</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+<%= _.template(require('./../includes/footer.html'))(data) %>
