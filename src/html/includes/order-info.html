@@ -1,0 +1,52 @@
+<div class="order-info">
+  <div class="order-info__title">Ваш заказ</div>
+  <div class="order-info__list">
+    
+    <% for (const i in [1, 2]) { %>
+
+      <div class="order-info__i">
+        <div class="order-info__cell order-info__cell_type_preview">
+          <a class="order-info__preview" href="#">
+            <img src="/uploads/offer1.jpg" alt="" class="order-info__preview-picture" />
+          </a>
+        </div>
+        <div class="order-info__cell order-info__cell_type_text">
+          <div class="order-info__name">
+            <a href="#" class="order-info__link">Аквариум Aquael GLOSSY 120 (260 л)</a>
+          </div>
+          <div class="order-info__text">
+            1 шт.
+          </div>
+          <div class="order-info__price display-lg display-sm">
+            24 980 руб.
+          </div>
+        </div>
+        <div class="order-info__cell order-info__cell_type_price display-md">
+          <div class="order-info__price">
+            24 980 руб.
+          </div>
+        </div>
+      </div>
+
+    <% } %>
+
+  </div>
+  <div class="order-info__props">
+    <div class="order-info__prop">
+      <div class="order-info__prop-label">Товары:</div>
+      <div class="order-info__prop-value">2</div>
+    </div>
+    <div class="order-info__prop">
+      <div class="order-info__prop-label">Стоимость:</div>
+      <div class="order-info__prop-value">31 640 руб.</div>
+    </div>
+    <div class="order-info__prop">
+      <div class="order-info__prop-label">Доставка:</div>
+      <div class="order-info__prop-value">0 руб.</div>
+    </div>
+    <div class="order-info__prop order-info__prop_type_main">
+      <div class="order-info__prop-label">Итого:</div>
+      <div class="order-info__prop-value">31 640 руб.</div>
+    </div>
+  </div>
+</div>

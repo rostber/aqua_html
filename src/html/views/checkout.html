@@ -15,11 +15,11 @@
     </div>
 
     <div class="order-columns">
-      <div class="order-columns__content">
-        <%= _.template(require('./../includes/checkout.html'))() %>
-      </div>
       <div class="order-columns__sidebar">
         <%= _.template(require('./../includes/order-info.html'))() %>
+      </div>
+      <div class="order-columns__content">
+        <%= _.template(require('./../includes/checkout.html'))() %>
       </div>
     </div>
 
