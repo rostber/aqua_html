@@ -26,6 +26,7 @@ $(function() {
   offerPictures();
   tooltip();
   fixedBtn();
+  qnt();
 })
 
 function offerPictures() {
@@ -220,6 +221,7 @@ function tooltip() {
 
 function fixedBtn() {
   var $el = $('.js-fixed-btn');
+  if ($el.length === 0) return false;
   var h = $el.height()
   var classFixed = 'offer-info__cart-btn_type_fixed';
   var render = function() {
@@ -230,4 +232,40 @@ function fixedBtn() {
   render();
   $(window).on('scroll', render);
   $(window).on('resize', render);
+}
+
+function qnt() {
+  $('.js-qnt').each(function() {
+    var $el = $(this);
+    var $elI = $el.find('.js-qnt-i');
+    var $elV = $el.find('.js-qnt-v');
+    var $elP = $el.find('.js-qnt-p');
+    var $elM = $el.find('.js-qnt-m');
+    var max = parseInt($elV.data('max'));
+    var render = function() {
+      $elV.text($elI.val())
+    }
+    render();
+    $elP.click(function() {
+      var value = parseInt($elI.val());
+      if (max <= value) value = parseInt(max);
+      else value++;
+      $elV.text(value);
+      $elI.val(value);
+    });
+    $elM.click(function() {
+      var value = parseInt($elI.val());
+      if (value < 2) value = 1;
+      else value--;
+      $elV.text(value);
+      $elI.val(value);
+    });
+    $elV.on('input', function() {
+      var value = parseInt($elV.text());
+      if (max <= value) value = parseInt(max);
+      if (value < 1 || isNaN(value)) value = 1;
+      $elV.text(value);
+      $elI.val(value);
+    });
+  });
 }

@@ -1,0 +1,117 @@
+.cart__list
+  margin-bottom: 30px
+
+.cart__i
+  display: flex
+  align-items: center
+
+  &:not(:last-child)
+    border-bottom: 1px solid #DADADA
+    margin-bottom: 30px
+    padding-bottom: 30px
+
+.cart__cell
+  flex: 1
+
+  &:not(:last-child)
+    margin-right: 30px
+
+.cart__cell_type_preview
+  flex: 0
+
+.cart__cell_type_price
+  flex: 0
+  text-align: right
+
+.cart__cell_type_qnt
+  flex: 0 0 150px
+  text-align: right
+
+.cart__cell_type_remove
+  flex: 0 0 90px
+  text-align: right
+
+.cart__preview
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 120px
+  width: 120px
+  background-color: #fff
+  box-sizing: border-box
+  padding: 10px
+
+.cart__preview-picture
+  max-width: 100%
+  max-height: 100%
+  display: block
+
+.cart__name
+  font-size: 16px
+  line-height: 19px
+
+.cart__text
+  font-size: 15px
+  line-height: 18px
+  margin-top: 16px
+
+.cart__price
+  font-size: 18px
+  line-height: 21px
+  font-weight: bold
+  white-space: nowrap
+
+.cart__remove
+  cursor: pointer
+  color: rgba(201, 201, 201, 0.5)
+  font-size: 32px
+  transition: all linear 0.2s
+
+  &:hover
+    color: $color_blink
+
+.cart__footer
+  background-color: #fff
+  padding: 20px 30px
+  display: flex
+  align-items: center
+
+.cart__footer-text
+  flex: 1
+
+.cart__footer-cost
+  flex: 0
+  margin-left: 50px
+
+.cart__footer-action
+  flex: 0 0 260px
+  margin-left: 50px
+  white-space: nowrap
+
+.cart__const
+  font-weight: bold
+  font-size: 20px
+  line-height: 30px
+  white-space: nowrap
+
+.cart__action-m
+  margin-bottom: 20px
+  display: flex
+  align-items: center
+
+.cart__action-m-l
+  flex: 1
+
+.cart__action-m-r
+  flex: 0
+
+@media screen and (max-width: $width_md)
+
+  .cart__footer
+    display: block
+
+  .cart__footer-action, .cart__footer-cost
+    margin: 0 0 20px 0
+
+  .cart__price
+    margin: 20px 0

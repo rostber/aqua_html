@@ -1,0 +1,111 @@
+<div class="section">
+  <div class="section__head">
+    <div class="section__title">
+      Корзина (4 товара)
+    </div>
+  </div>
+  <div class="cart">
+    <div class="cart__list">
+
+      <% for (const i in [1, 2, 3, 4]) { %>
+
+        <div class="cart__i">
+          <div class="cart__cell cart__cell_type_preview">
+            <a class="cart__preview" href="#">
+              <img src="/uploads/offer1.jpg" alt="" class="cart__preview-picture" />
+            </a>
+          </div>
+          <div class="cart__cell cart__cell_type_info">
+            <div class="cart__name">
+              <a href="#" class="cart__link">Аквариум Aquael GLOSSY 120 (260 л)</a>
+            </div>
+            <div class="cart__text">
+              Цвет черный, с тумбой, без освещения
+            </div>
+            <div class="display-md display-sm">
+              <div class="cart__price">24 980 руб.</div>
+              <div class="cart__action-m">
+                <div class="cart__action-m-l">
+                  <div class="qnt js-qnt">
+                    <div class="qnt__content">
+                      <div class="qnt__minus js-qnt-m">
+                        <i class="icon-minus"></i>
+                      </div>
+                      <div class="qnt__input js-qnt-v" contenteditable="true" data-max="100"></div>
+                      <div class="qnt__plus js-qnt-p">
+                        <i class="icon-plus"></i>
+                      </div>
+                    </div>
+                    <input type="hidden" name="qnt" value="1" class="js-qnt-i" />
+                  </div>
+                </div>
+                <div class="cart__action-m-r">
+                  <div class="cart__remove">
+                    <i class="icon-trash"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__cell cart__cell_type_price display-lg">
+            <div class="cart__price">24 980 руб.</div>
+          </div>
+          <div class="cart__cell cart__cell_type_qnt display-lg">
+            <div class="qnt js-qnt">
+              <div class="qnt__content">
+                <div class="qnt__minus js-qnt-m">
+                  <i class="icon-minus"></i>
+                </div>
+                <div class="qnt__input js-qnt-v" contenteditable="true" data-max="100"></div>
+                <div class="qnt__plus js-qnt-p">
+                  <i class="icon-plus"></i>
+                </div>
+              </div>
+              <input type="hidden" name="qnt" value="1" class="js-qnt-i" />
+            </div>
+          </div>
+          <div class="cart__cell cart__cell_type_remove display-lg">
+            <div class="cart__remove">
+              <i class="icon-trash"></i>
+            </div>
+          </div>
+        </div>
+
+      <% } %>
+
+    </div>
+    <div class="cart__footer">
+      <div class="cart__footer-text">
+        <div class="offer-info">
+          <div class="offer-info__text">
+            <span class="offer-info__hint">Ваш город:</span>
+            <span class="location">
+              <a class="location__link" href="#">Москва</a>
+              <i class="icon-down location__arrow"></i>
+            </span>
+          </div>
+          <div class="offer-info__text">
+            <span class="offer-info__hint">
+              Дата доставки:
+            </span>
+            завтра, 27 сентября,
+            <span class="offer-info__hint">
+              способ доставки:
+            </span>
+            курьером —
+            <span class="offer-info__strong">
+              бесплатно
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="cart__footer-cost">
+        <div class="cart__const">Итого: 31 640 руб.</div>
+      </div>
+      <div class="cart__footer-action">
+        <button class="btn btn_display_block btn_size_big">Оформить заказ</div>
+      </div>
+    </div>
+
+  </div>
+</div>
