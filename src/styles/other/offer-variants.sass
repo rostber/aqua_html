@@ -1,0 +1,61 @@
+.offer-variants
+  margin-bottom: 15px
+
+.offer-variants__label
+  font-size: 15px
+  line-height: 28px
+  margin-bottom: 11px
+  color: $color_hint
+
+.offer-variants__label-value
+  color: $color_text
+
+.offer-variants__list
+  font-size: 0
+
+.offer-variants_type_btn
+
+  .offer-variants__i
+    color: $color_blink
+    font-size: 15px
+    line-height: 1.2em
+    margin: 0 0 10px 0
+    padding: 10px
+    border: 1px solid transparent
+    border-radius: 4px
+
+    &:hover
+      color: $color_text
+
+  .offer-variants__i_state_active
+    border-color: $color_blink
+    color: $color_text
+
+
+.offer-variants_type_circle
+
+  .offer-variants__i
+    color: #fff
+    font-size: 16px
+    line-height: 40px
+    border: 1px solid rgba(141, 141, 141, 0.2)
+    border-radius: 50%
+    width: 40px
+    height: 40px
+    margin: 0 10px 10px 0
+
+    &:after
+      content: "\e909"
+      font-family: $icons
+      opacity: 0
+
+  .offer-variants__i_state_active, .offer-variants__i:hover
+    &:after
+      opacity: 1
+
+.offer-variants__i
+  display: inline-block
+  vertical-align: top
+  cursor: pointer
+  text-align: center
+  white-space: nowrap

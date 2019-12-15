@@ -1,34 +1,67 @@
-<%
-const list = [
-  {
-    label: 'Производительность',
-    value: '600 л/час'
-  },
-  {
-    label: 'Объём канистры',
-    value: '5,7 л'
-  },
-  {
-    label: 'Высота подъёма воды',
-    value: '1,1 м'
-  },
-  {
-    label: 'Количество корзин',
-    value: '3'
-  },
-  {
-    label: 'Высота подъёма воды',
-    value: '1,1 м'
-  },
-  {
-    label: 'Количество корзин',
-    value: '3'
-  }
-]
-%>
+<div class="offer-variants">
+  <div class="offer-variants__label">Комплектация</div>
+  <div class="offer-variants__list offer-variants_type_btn">
+    <span class="offer-variants__i">без тумбы</span>
+    <span class="offer-variants__i offer-variants__i_state_active">с тумбой</span>
+  </div>
+</div>
+
+<div class="offer-variants">
+  <div class="offer-variants__label">
+  Цвет: <span class="offer-variants__label-value">золотой орех</span>
+  </div>
+  <div class="offer-variants__list offer-variants_type_circle">
+    <span style="background-color: #fff; color: #000;" class="offer-variants__i"></span>
+    <span style="background-color: #F8F2E7; color: #000;" class="offer-variants__i offer-variants__i_state_active"></span>
+    <span style="background-color: #FCD9AF; color: #fff;" class="offer-variants__i"></span>
+    <span style="background-color: #F4BE53; color: #fff;" class="offer-variants__i"></span>
+    <span style="background-color: #B37E30; color: #fff;" class="offer-variants__i"></span>
+    <span style="background-color: #000000; color: #fff;" class="offer-variants__i"></span>
+  </div>
+</div>
+
+<div class="offer-variants">
+  <div class="offer-variants__label">Освещение</div>
+  <div class="offer-variants__list offer-variants_type_btn">
+    <span class="offer-variants__i">без освещения</span>
+    <span class="offer-variants__i">T5</span>
+    <span class="offer-variants__i">Sun Light</span>
+    <span class="offer-variants__i">Day Light</span>
+    <span class="offer-variants__i offer-variants__i_state_active">Maxi Light</span>
+    <span class="offer-variants__i">Aqua Plant</span>
+  </div>
+</div>
 
 <div class="offer-props js-list" data-qnt="4">
-  <% for(const i of list) { %>
+  <%
+  const list = [
+    {
+      label: 'Производительность',
+      value: '600 л/час'
+    },
+    {
+      label: 'Объём канистры',
+      value: '5,7 л'
+    },
+    {
+      label: 'Высота подъёма воды',
+      value: '1,1 м'
+    },
+    {
+      label: 'Количество корзин',
+      value: '3'
+    },
+    {
+      label: 'Высота подъёма воды',
+      value: '1,1 м'
+    },
+    {
+      label: 'Количество корзин',
+      value: '3'
+    }
+  ]
+  for(const i of list) {
+  %>
     <div class="offer-props__i js-list-i">
       <div class="offer-props__label"><%= i.label %></div>
       <div class="offer-props__value"><%= i.value %></div>
