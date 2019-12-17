@@ -1,0 +1,89 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="hidden">
+  <div class="modal js-modal-cart">
+    <div class="modal__title">
+      Добавить товар в корзину
+    </div>
+    <div class="modal__content">
+      <div class="modal-cart">
+
+        <div class="cart cart_type_modal">
+          <div class="cart__list">
+
+            <% for (const i in [1, 2]) { %>
+
+              <div class="cart__i">
+                <div class="cart__cell cart__cell_type_preview">
+                  <a class="cart__preview" href="#">
+                    <img src="/uploads/offer1.jpg" alt="" class="cart__preview-picture" />
+                  </a>
+                </div>
+                <div class="cart__cell cart__cell_type_info">
+                  <div class="cart__name">
+                    <a href="#" class="cart__link">Аквариум Aquael GLOSSY 120 (260 л)</a>
+                  </div>
+                  <div class="cart__price">24 980 руб.</div>
+                  <div class="cart__text">
+                    Цвет черный, с тумбой, без освещения
+                  </div>
+                </div>
+                <div class="cart__cell cart__cell_type_qnt">
+                  <div class="qnt js-qnt">
+                    <div class="qnt__content">
+                      <div class="qnt__minus js-qnt-m">
+                        <i class="icon-minus"></i>
+                      </div>
+                      <div class="qnt__input js-qnt-v" contenteditable="true" data-max="100"></div>
+                      <div class="qnt__plus js-qnt-p">
+                        <i class="icon-plus"></i>
+                      </div>
+                    </div>
+                    <input type="hidden" name="qnt" value="1" class="js-qnt-i" />
+                  </div>
+                </div>
+                <div class="cart__cell cart__cell_type_remove display-lg">
+                  <div class="cart__remove">
+                    <i class="icon-trash"></i>
+                  </div>
+                </div>
+              </div>
+
+            <% } %>
+
+          </div>
+        </div>
+
+        <div class="modal-cart__footer">
+          <div class="modal-cart__delavery">
+            <span class="modal-cart__delavery-text">
+              2 товара на сумму 
+              <span class="modal-cart__delavery-cost">31 640 руб.</span>
+            </span>
+            <a class="modal-cart__delavery-label link" href="#">+ Доставка </a>
+          </div>
+          <div class="modal-cart__action">
+            <div class="modal-cart__action-back">
+              <i class="icon-arrow-left modal-cart__action-back-icon"></i>
+              <a href="#" class="link">Продолжить покупки</a>
+            </div>
+            <div class="modal-cart__action-submit">
+              <button class="btn btn_size_big">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+
+<script type="text/javascript">
+$(function() {
+  $.fancybox.open( $('.js-modal-cart') );
+});
+</script>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
