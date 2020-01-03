@@ -1,0 +1,87 @@
+.m-catalog
+  display: none
+  position: relative
+  z-index: 50
+
+.m-catalog_state_show
+  display: block
+
+.m-catalog__center
+  position: relative
+
+.m-catalog__modal
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  background-color: #fff
+  border-radius: 4px
+  border: 2px solid $color_hint
+
+.m-catalog__modal-row
+  display: flex
+
+.m-catalog__close
+  position: absolute
+  right: 20px
+  top: 20px
+  font-size: 22px
+  cursor: pointer
+  color: #D3D3D3
+
+.m-catalog__sidebar
+  flex: 0 0 230px
+  background-color: $color_link
+  color: #fff
+  padding: 10px 0
+
+.m-catalog__content
+  flex: 1
+  padding: 40px 20px 40px 40px
+
+.m-catalog__sidebar-i
+  cursor: pointer
+  padding: 10px 20px
+  font-size: 16px
+  line-height: 26px
+
+  &:hover
+    text-decoration: underline
+
+.m-catalog__sidebar-i_state_active
+  background-color: #fff
+  color: $color_text
+
+.m-catalog__sidebar-delimeter
+  margin: 15px 10px
+  border-top: 2px solid #fff
+
+.m-catalog__content-i
+  display: none
+
+.m-catalog__content-i_state_active
+  display: block
+
+.m-catalog__row
+  display: flex
+
+.m-catalog__cell
+  flex: 0 0 33.33%
+  box-sizing: border-box
+  padding-right: 20px
+
+.m-catalog__group
+  margin-bottom: 40px
+
+.m-catalog__link
+  font-size: 15px
+  line-height: 35px
+  text-decoration: none
+  color: $color_hint
+
+  &:hover
+    text-decoration: underline
+
+.m-catalog__link_type_strong
+  font-weight: bold
+  color: $color_text

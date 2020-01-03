@@ -114,8 +114,9 @@
       </div>
 
       <div class="header__cell header__cell_type_action">
-        <button class="btn btn_nowrap_yes">
-          <i class="icon-beacon btn__icon"></i>
+        <button class="btn btn_nowrap_yes js-toggle" data-toggle=".js-catalog" data-class="m-catalog_state_show" data-handler-class="btn_state_catalog-show">
+          <i class="icon-beacon btn__icon-catalog-hide"></i>
+          <i class="icon-close btn__icon-catalog-show"></i>
           <span class="btn__inside">
             Каталог товаров
           </span>
@@ -342,6 +343,164 @@
         </div>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<div class="m-catalog js-catalog">
+  <div class="page__center m-catalog__center">
+    <div class="m-catalog__modal">
+      <div class="m-catalog__modal-row">
+        <div class="m-catalog__sidebar">
+
+          <% ['Пресноводная аквариумистика', 'Террариумистика', 'Морская аквариумистика', 'Пруд', 'Бассейны', 'Полив и орошение', false, 'Скидки', 'Уцененные товары'].forEach(function(value) { %>
+
+            <% if (value) { %>
+
+              <div class="m-catalog__sidebar-i js-catalog-i">
+                <%= value %>
+              </div>
+
+            <% } else { %>
+
+              <div class="m-catalog__sidebar-delimeter"></div>
+
+            <% } %>
+
+          <% }) %>
+
+        </div>
+        <div class="m-catalog__content">
+          <div class="m-catalog__close js-toggle" data-toggle=".js-catalog" data-class="m-catalog_state_show">
+            <i class="icon-close"></i>
+          </div>
+          <div class="m-catalog__content-i js-catalog-content">
+            
+            <div class="m-catalog__row">
+              <div class="m-catalog__cell">
+                <div class="m-catalog__group">
+
+                  <% ['Террариумы', 'Тумбы', 'Террариумы для черепах', 'Флорариумы', 'Аксессуары для флорариума', 'Инкубаторы', 'Контейнеры для разведения', 'Фильтрация', 'Фильтры'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link m-catalog__link_type_strong"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                  <% ['Помпы', 'Аксессуары для фильтров'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                </div>
+                <div class="m-catalog__group">
+
+                  <div class="m-catalog__i">
+                    <a href="#" class="m-catalog__link m-catalog__link_type_strong">Терморегуляция</a>
+                  </div>
+
+                  <% ['Нагреватели погружные', 'Коврики для рептилий', 'Керамические тепловые нагреватели', 'Грунтовые термокабели', 'Нагреватели декорации', 'Термометры и гигрометры', 'Запчасти и аксессуары'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                </div>
+              </div>
+              <div class="m-catalog__cell">
+                <div class="m-catalog__group">
+
+                  <div class="m-catalog__i">
+                    <a href="#" class="m-catalog__link m-catalog__link_type_strong">Освещение и облучение</a>
+                  </div>
+
+                  <% ['Светильники', 'Цокольные лампы', 'Комплектующие', 'Люминисцентные лампы Т8 ', 'Люминисцентные лампы Т5'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                </div>
+                <div class="m-catalog__group">
+
+                  <% ['Поддержание влажности', 'Грунты и декорации'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link m-catalog__link_type_strong"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                  <% ['Черепаший остров', 'Декорации', 'Фоны', 'Грунты и субстраты'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                </div>
+                <div class="m-catalog__group">
+
+                  <div class="m-catalog__i">
+                    <a href="#" class="m-catalog__link m-catalog__link_type_strong">Кормление</a>
+                  </div>
+
+                  <% ['Сухой корм для черепах', 'Корма для рептилий', 'Кормушки и поилки', 'Витамины и добавки'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                </div>
+              </div>
+              <div class="m-catalog__cell">
+
+                <div class="m-catalog__group">
+
+                  <% ['Запчасти и аксессуары', 'Террариумная химия'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link m-catalog__link_type_strong"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                  <% ['Животные', 'Амфибии', 'Черепахи', 'Ящерицы', 'Насекомые', 'Улитки', 'Другие животные'].forEach(function(value) { %>
+
+                    <div class="m-catalog__i">
+                      <a href="#" class="m-catalog__link"><%= value %></a>
+                    </div>
+
+                  <% }) %>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="m-catalog__content-i js-catalog-content">
+            Tab 2
+          </div>
+          <div class="m-catalog__content-i js-catalog-content">
+            Tab 3
+          </div>
+          <div class="m-catalog__content-i js-catalog-content">
+            Tab 4
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

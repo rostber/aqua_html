@@ -27,7 +27,23 @@ $(function() {
   tooltip();
   fixedBtn();
   qnt();
+  initCatalog();
 })
+
+function initCatalog() {
+  var $items = $('.js-catalog-i');
+  var $contents = $('.js-catalog-content')
+  var actI = 'm-catalog__sidebar-i_state_active';
+  var actContent = 'm-catalog__content-i_state_active';
+  if ($items.length === 0) return
+  $items.click(function() {
+    var index = $($items).index(this);
+    $items.removeClass(actI);
+    $(this).addClass(actI);
+    $contents.removeClass(actContent).eq(index).addClass(actContent);
+  });
+  $items[0].click();
+}
 
 function offerPictures() {
   var display = function(index) {
