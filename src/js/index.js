@@ -172,8 +172,7 @@ function toggle() {
 
 function naviDrop(options) {
   $(options.elHandler).click(function() {
-    $(options.elI).removeClass(options.currentClass)
-    $(this).parents(options.elI).addClass(options.currentClass)
+    $(this).parents(options.elI).first().toggleClass(options.currentClass)
   });
 }
 
