@@ -4,6 +4,8 @@ import 'slick-carousel';
 import noUiSlider from 'nouislider';
 import wNumb from './wNumb';
 import Tooltip from 'tooltip.js';
+import Inputmask from "inputmask"
+
 window.$ = window.jQuery = $;
 require('@fancyapps/fancybox/dist/jquery.fancybox');
 
@@ -28,7 +30,14 @@ $(function() {
   fixedBtn();
   qnt();
   initCatalog();
+  mask();
 })
+
+function mask() {
+  $('[data-mask]').each(function() {
+    Inputmask({"mask": $(this).data('mask')}).mask(this);
+  });
+}
 
 function initCatalog() {
   var $items = $('.js-catalog-i');

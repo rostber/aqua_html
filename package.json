@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "inputmask": "^5.0.1",
     "jquery": "^3.4.1",
     "jquery-ui-bundle": "^1.12.1-migrate",
     "nouislider": "^14.1.0",
