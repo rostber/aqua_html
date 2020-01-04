@@ -15,7 +15,7 @@
 
 .offer-variants_type_btn
 
-  .offer-variants__i
+  .offer-variants__btn
     color: $color_blink
     font-size: 15px
     line-height: 1.2em
@@ -27,14 +27,13 @@
     &:hover
       color: $color_text
 
-  .offer-variants__i_state_active
+  .offer-variants__input:checked + .offer-variants__btn
     border-color: $color_blink
     color: $color_text
 
-
 .offer-variants_type_circle
 
-  .offer-variants__i
+  .offer-variants__btn
     color: #fff
     font-size: 16px
     line-height: 40px
@@ -49,13 +48,21 @@
       font-family: $icons
       opacity: 0
 
-  .offer-variants__i_state_active, .offer-variants__i:hover
+  .offer-variants__input:checked + .offer-variants__btn, .offer-variants__btn:hover
     &:after
       opacity: 1
 
 .offer-variants__i
   display: inline-block
   vertical-align: top
+
+.offer-variants__input
+  position: absolute
+  left: -99999em
+  opacity: 0
+
+.offer-variants__btn
+  display: block
   cursor: pointer
   text-align: center
   white-space: nowrap
