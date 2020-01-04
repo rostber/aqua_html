@@ -19,20 +19,26 @@
 .paging__next
   text-align: right
 
-.paging__link, .paging__active
+.paging__link, .paging__active, .paging__delimeter
   font-size: 20px
   line-height: 20px
   text-decoration: none
-  padding: 15px 20px
+  padding: 15px 5px
+  min-width: 49px
+  box-sizing: border-box
+  text-align: center
   border-radius: 4px
   transition: all linear 0.2s
   display: inline-block
 
-.paging__link
+.paging__link:not(.paging__link_type_disabled)
   color: $color_blink
 
   &:hover
     text-decoration: underline
+
+.paging__link_type_disabled
+  color: $color_hint
 
 .paging__active
   text-decoration: none
