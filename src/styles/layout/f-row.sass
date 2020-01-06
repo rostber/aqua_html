@@ -1,6 +1,6 @@
 .f-row
   display: flex
-  align-items: top
+  align-items: flex-start
   margin: 0 -15px
 
   &:last-child
@@ -19,6 +19,11 @@
   .f-row__cell
     padding: 0
 
+.f-row_type_no-margin
+
+  .f-row__cell
+    margin-bottom: 0
+
 .f-row__cell
   flex: 1
   padding: 0 15px
@@ -29,6 +34,10 @@
   flex: 0 0 29px
   text-align: center
   padding: 0
+
+.f-row__cell_type_search
+  flex: 0 0 60px
+  padding-left: 0
 
 .f-row__label
   font-size: 16px

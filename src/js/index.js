@@ -232,14 +232,21 @@ function tooltip() {
   $('[data-tooltip]').each(function() {
     var $el = $(this);
     var position = $el.data('tooltip-position') || 'top';
+    var trigger = $el.data('tooltip-trigger') || 'hover focus'
     var text = $el.data('tooltip');
     var contentSelector = $el.data('tooltip-el');
     if (contentSelector) text = $(contentSelector).html();
-    new Tooltip($el, {
+    var tooltip = new Tooltip($el, {
       placement: position,
       title: text,
+      trigger: trigger,
       html: true
     });
+    if (contentSelector) {
+      $(document).on('click.tooltipHide', '[data-tooltip-hide]', function() {
+        tooltip.hide();
+      });
+    }
   });
 }
 

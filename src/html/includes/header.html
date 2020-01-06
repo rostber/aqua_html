@@ -20,7 +20,7 @@
 
         <div class="topbar__cell topbar__cell_type_loc display-lg display-md">
           <i class="topbar__icon-prepend icon-point"></i>
-          <span class="topbar__link topbar__link_overflow_yes">
+          <span class="topbar__link topbar__link_overflow_yes" data-tooltip data-tooltip-el=".js-location" data-tooltip-trigger="click">
             Ваш город: Нижний Новгород
           </span>
           <i class="topbar__icon-append icon-down"></i>
@@ -313,7 +313,7 @@
               <div class="contacts__address-icon">
                 <i class="icon-point"></i>
               </div>
-              <a href="#" class="contacts__address-link">Ваш город: Нижний Новгород</a>
+              <span class="contacts__address-link" data-tooltip data-tooltip-el=".js-location" data-tooltip-trigger="click">Ваш город: Нижний Новгород</span>
             </div>
           </div>
           <div class="contacts__i">
@@ -501,6 +501,28 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip tooltip_type_location hidden js-location">
+  <div class="tooltip__close" data-tooltip-hide>
+    <i class="icon-close"></i>
+  </div>
+  <div class="tooltip__title">Другой город</div>
+  <div class="tooltip__location">
+    <a href="#" class="tooltip__location-i">Москва</a>
+    <a href="#" class="tooltip__location-i">Санкт-Петербург</a>
+  </div>
+  <div class="tooltip__text">
+    Начните вводить первые буквы названия города и выберите его из выпадающего списка.
+  </div>
+  <div class="f-row f-row_type_no-margin">
+    <div class="f-row__cell">
+      <input type="text" class="input" />
+    </div>
+    <div class="f-row__cell f-row__cell_type_search">
+      <button class="btn">OK</button>
     </div>
   </div>
 </div>
