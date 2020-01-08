@@ -6,44 +6,52 @@
     <div class="modal__title">
       Вход
     </div>
-    <form method="post" action="#">
-      <div class="f-row">
-        <div class="f-row__cell">
-          <div class="f-row__label">Адрес электронной  почты</div>
-          <input type="email" name="email" class="input" />
-        </div>
-      </div>
-      <div class="f-row">
-        <div class="f-row__cell">
-          <div class="f-row__label">
-            <div class="f-row__label-l">Пароль</div>
-            <div class="f-row__label-r">
-              <a href="#" class="link link_underline_yes">Забыли пароль?</a>
-            </div>
+    <div class="modal__content">
+      <form method="post" action="#">
+        <div class="f-row">
+          <div class="f-row__cell">
+            <div class="f-row__label">Адрес электронной  почты</div>
+            <input type="email" name="email" class="input" />
           </div>
-          <input type="password" name="password" class="input" />
         </div>
-      </div>
-      <div class="modal__delimeter"></div>
-      <div class="f-row">
-        <div class="f-row__cell">
-          <label class="control control_type_checkbox control_type_checkout">
-            <input type="checkbox" name="agree" value="true" class="control__input" /><span
-              class="control__text"
-            >
-              Запомнить меня
-            </span>
-          </label>
+        <div class="f-row">
+          <div class="f-row__cell">
+            <div class="f-row__label">
+              <div class="f-row__label-l">Пароль</div>
+              <div class="f-row__label-r">
+                <a href="#" class="link link_underline_yes">Забыли пароль?</a>
+              </div>
+            </div>
+            <input type="password" name="password" class="input" />
+          </div>
         </div>
-      </div>
-      <div class="modal__content">
-        <div class="modal__action">
-          <button class="btn btn_size_big">Войти в аккаунт</button>
+        <div class="f-row">
+          <div class="f-row__cell">
+            <label class="control control_type_checkbox control_type_checkout">
+              <input type="checkbox" name="agree" value="true" class="control__input" /><span
+                class="control__text"
+              >
+                Запомнить меня
+              </span>
+            </label>
+          </div>
         </div>
-        <div class="modal__sub-action">
-          <a href="#" class="btn btn_size_big btn_type_link">Регистрация нового пользователя</a>
+        <div class="f-row">
+          <div class="f-row__cell">
+            <div class="modal__delimeter"></div>
+          </div>
         </div>
-      </div>
+        <div class="f-row f-row_size_sm">
+          <div class="f-row__cell f-row__cell_align_center">
+            <button class="btn btn_size_big btn_width_300">Войти в аккаунт</button>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-row__cell f-row__cell_align_center">
+            <a href="#" class="btn btn_size_big btn_type_link">Регистрация нового пользователя</a>
+          </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>
