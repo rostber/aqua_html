@@ -50,6 +50,20 @@
   font-size: 18px
   padding: 12px 20px
 
+.btn_type_link
+  background-color: transparent
+  border-style: none
+  color: $color_blink
+  text-decoration: underline
+
+  &:hover
+    text-decoration: none
+
+  &:not([disabled])
+
+    &:hover, &:active
+      box-shadow: none
+
 .btn_size_big
   font-size: 18px
   line-height: 20px

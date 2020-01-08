@@ -1,0 +1,60 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="hidden">
+  <div class="modal modal_type_padding js-modal-signup">
+    <div class="modal__title">
+      Регистрация
+    </div>
+    <form method="post" action="#">
+      <div class="f-row">
+        <div class="f-row__cell">
+          <div class="f-row__label">Адрес электронной  почты</div>
+          <input type="email" name="email" class="input" />
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-row__cell">
+          <div class="f-row__label">Пароль</div>
+          <input type="password" name="password" class="input" />
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-row__cell">
+          <div class="f-row__label">Повторите пароль</div>
+          <input type="password" name="password_repeat" class="input" />
+        </div>
+      </div>
+      <div class="modal__delimeter"></div>
+      <div class="f-row">
+        <div class="f-row__cell">
+          <label class="control control_type_checkbox control_type_checkout">
+            <input type="checkbox" name="agree" value="true" class="control__input" /><span
+              class="control__text"
+            >
+              Подтверждаю свое согласие на обработку и хранение моих персональных данных в соответствии с <a href="#" class="link link_color_black">политикой конфенденциальности</a>
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="modal__content">
+        <div class="modal__action">
+          <button class="btn btn_size_big">Зарегистрироваться</button>
+        </div>
+        <div class="modal__sub-action">
+          <a href="#" class="btn btn_size_big btn_type_link">Войти в аккаунт</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+
+<script type="text/javascript">
+$(function() {
+  $.fancybox.open( $('.js-modal-signup') );
+});
+</script>
+
+<%= _.template(require('./../includes/footer.html'))(data) %>
