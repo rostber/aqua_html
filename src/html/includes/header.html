@@ -57,12 +57,41 @@
           </ul> 
         </div>
 
+        <div class="hidden">
+          <div class="js-autocomplete-result">
+            <div class="ac">
+              <div class="ac__group ac__group_delimeter_yes">
+                <a href="#" class="ac__link">Аквариумы</a>
+                <a href="#" class="ac__link">Аквариумная химия</a>
+              </div>
+              <div class="ac__group">
+                <div class="ac__title">Товары</div>
+                <a href="#" class="ac__offer">
+                  <img src="/uploads/offer1.jpg" alt="" class="ac__offer-picture">
+                  <span class="ac__offer-name">
+                    Аквариум Aquael GLOSSY 120 (260 л)
+                  </span>
+                </a>
+                <a href="#" class="ac__offer">
+                  <img src="/uploads/offer2.jpg" alt="" class="ac__offer-picture">
+                  <span class="ac__offer-name">
+                    Aквариум SHRIMP SET SMART LED PLANT 20
+                  </span>
+                </a>
+              </div>
+              <div class="ac__group">
+                <a href="#" class="ac__more">Показать все (340)</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="topbar__cell topbar__cell_type_action display-sm">
           <div class="topbar-act">
             <div class="topbar-act__i">
               <form action="#" class="search search_type_mobile js-search">
                 <label>
-                  <input type="text" name="text" placeholder="поиск товаров" class="search__input" />
+                  <input type="text" name="text" placeholder="поиск товаров" class="search__input js-autocomplete" autocomplete="off" />
                   <span class="search__icon">
                     <i class="icon-search"></i>
                   </span>
@@ -83,7 +112,7 @@
         <div class="topbar__cell topbar__cell_type_search display-lg display-md">
           <form action="#" class="search">
             <label>
-              <input type="text" name="text" placeholder="поиск товаров" class="search__input" />
+              <input type="text" name="text" placeholder="поиск товаров" class="search__input js-autocomplete" autocomplete="off" />
               <span class="search__icon">
                 <i class="icon-search"></i>
               </span>

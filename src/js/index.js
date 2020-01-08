@@ -4,7 +4,7 @@ import 'slick-carousel';
 import noUiSlider from 'nouislider';
 import wNumb from './wNumb';
 import Tooltip from 'tooltip.js';
-import Inputmask from "inputmask"
+import Inputmask from 'inputmask';
 
 window.$ = window.jQuery = $;
 require('@fancyapps/fancybox/dist/jquery.fancybox');
@@ -31,7 +31,57 @@ $(function() {
   qnt();
   initCatalog();
   mask();
+  autocomplete();
 })
+
+function autocomplete() {
+  var delay = 500;
+  var reference = $('.js-autocomplete');
+  var content = $('.js-autocomplete-result');
+
+  var timer = null;
+  var autocomplete = null;
+
+  var render = function(options) {
+    content.find('.js-data').html(options.value)
+  }
+
+  var hide = function() {
+    if (!autocomplete) return;
+    autocomplete.dispose();
+    autocomplete = null;
+  }
+
+  var show = function($el, data) {
+    render(data);
+    hide();
+    autocomplete = new Tooltip($el.parent(), {
+      title: content.html(),
+      trigger: null,
+      html: true,
+      closeOnClickOutside: true,
+      placement: 'bottom-start'
+    });
+    autocomplete.show()
+  }
+
+  var load = function($el, value) {
+    show($el, {value: value});
+  }
+
+  reference.on('keypress keydown', function(e) {
+    var $el = $(this);
+    var value = $el.val();
+    clearTimeout(timer);
+    if (value.length > 0) {
+      timer = setTimeout(function() {
+        load($el, value);
+      }, delay);
+    } else {
+      hide();
+    }
+  }).blur(hide)
+}
 
 function mask() {
   $('[data-mask]').each(function() {
@@ -240,7 +290,8 @@ function tooltip() {
       placement: position,
       title: text,
       trigger: trigger,
-      html: true
+      html: true,
+      closeOnClickOutside: true
     });
     if (contentSelector) {
       $(document).on('click.tooltipHide', '[data-tooltip-hide]', function() {
