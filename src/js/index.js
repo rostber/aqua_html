@@ -32,7 +32,22 @@ $(function() {
   initCatalog();
   mask();
   autocomplete();
+  rate();
 })
+
+function rate() {
+  $('.js-rate').each(function() {
+    var $el = $(this);
+    var $i = $el.find('.js-rate-i');
+    var $input = $el.find('.js-rate-input');
+    $i.click(function() {
+      var index = $i.index($(this)) + 1;
+      $el.removeClass('rate_value_0 rate_value_1 rate_value_2 rate_value_3 rate_value_4 rate_value_5');
+      $el.addClass('rate_value_' + index);
+      $input.val(index)
+    });
+  });
+}
 
 function autocomplete() {
   var delay = 500;

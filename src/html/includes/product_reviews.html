@@ -1,0 +1,92 @@
+<div class="section">
+
+  <div class="offer-tabs">
+    <a class="offer-tabs__i offer-tabs__i_type_link" href="/product.html">
+      <span class="display-lg display-md">
+        Описание и характеристики
+      </span>
+      <span class="display-sm">
+        Описание
+      </span>
+    </a>
+    <span class="offer-tabs__i">
+      Отзывы (82)
+    </span>
+  </div>
+
+  <div class="reviews">
+
+    <% [5, 4, 3, 2, 1, 0].forEach(function(value) { %>
+
+      <div class="reviews__i">
+        <div class="reviews__rate">
+          <div class="rate rate_value_<%= value %>">
+            <div class="rate__list">
+              <i class="icon-star rate__i"></i>
+              <i class="icon-star rate__i"></i>
+              <i class="icon-star rate__i"></i>
+              <i class="icon-star rate__i"></i>
+              <i class="icon-star rate__i"></i>
+            </div>
+          </div>
+        </div>
+        <div class="reviews__info">
+          <span class="reviews__name">Екатерина</span>
+          <span class="reviews__date">22.08.2018</span>
+        </div>
+        <div class="reviews__text">
+          С такими размерами место для него найдётся в любой квартире, поэтому и выбрали. Шумом не достает, уход тоже без проблем, никаких заморочек.
+        </div>
+      </div>
+
+    <% }) %>
+
+  </div>
+
+</div>
+
+<div class="section">
+  <div class="section__head">
+    <h2 class="section__title">
+      Оставить отзыв
+    </h2>
+  </div>
+  <form method="post" action="#">
+    <div class="f-row">
+      <div class="f-row__cell">
+        <div class="f-row__label">Ваше имя</div>
+        <input type="text" name="name" class="input" />
+      </div>
+      <div class="f-row__cell">
+        <div class="f-row__label">E-mail</div>
+        <input type="text" name="email" class="input" />
+      </div>
+    </div>
+    <div class="f-row">
+      <div class="f-row__cell">
+        <div class="f-row__label">Ваш отзыв</div>
+        <textarea name="text" class="input input_type_textarea"></textarea>
+      </div>
+    </div>
+    <div class="f-row">
+      <div class="f-row__cell">
+      <div class="rate rate_type_select js-rate">
+        <div class="rate__label">
+          Ваша оценка (от 1 до 5)
+        </div>
+        <div class="rate__list">
+          <i class="icon-star rate__i js-rate-i"></i>
+          <i class="icon-star rate__i js-rate-i"></i>
+          <i class="icon-star rate__i js-rate-i"></i>
+          <i class="icon-star rate__i js-rate-i"></i>
+          <i class="icon-star rate__i js-rate-i"></i>
+        </div>
+        <input type="hidden" name="rate" value="0" class="js-rate-input" />
+      </div>
+      </div>
+      <div class="f-row__cell f-row__cell_align_right">
+        <button class="btn btn_size_big" type="submit">Оставить отзыв</button>
+      </div>
+    </div>
+  </form>
+</div>
