@@ -36,15 +36,11 @@ $(function() {
 
 function autocomplete() {
   var delay = 500;
+  var url = '/autocomplete_result.html';
   var reference = $('.js-autocomplete');
-  var content = $('.js-autocomplete-result');
 
   var timer = null;
   var autocomplete = null;
-
-  var render = function(options) {
-    content.find('.js-data').html(options.value)
-  }
 
   var hide = function() {
     if (!autocomplete) return;
@@ -52,11 +48,10 @@ function autocomplete() {
     autocomplete = null;
   }
 
-  var show = function($el, data) {
-    render(data);
+  var show = function($el, html) {
     hide();
     autocomplete = new Tooltip($el.parent(), {
-      title: content.html(),
+      title: html,
       trigger: null,
       html: true,
       closeOnClickOutside: true,
@@ -66,7 +61,12 @@ function autocomplete() {
   }
 
   var load = function($el, value) {
-    show($el, {value: value});
+    $.ajax({
+      url: url,
+      context: document.body
+    }).done(function(html) {
+      show($el, html);
+    });
   }
 
   reference.on('keypress keydown', function(e) {
@@ -80,7 +80,11 @@ function autocomplete() {
     } else {
       hide();
     }
-  }).blur(hide)
+  }).blur(function() {
+    setTimeout(function() {
+      hide();
+    }, 100);
+  })
 }
 
 function mask() {
