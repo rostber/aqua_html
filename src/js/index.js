@@ -7,7 +7,10 @@ import Tooltip from 'tooltip.js';
 import Inputmask from 'inputmask';
 
 window.$ = window.jQuery = $;
+
 require('@fancyapps/fancybox/dist/jquery.fancybox');
+require('@chenfengyuan/datepicker/dist/datepicker.js');
+require('@chenfengyuan/datepicker/i18n/datepicker.ru-RU');
 
 const widthMd = 1270
 const widthSm = 768
@@ -33,7 +36,18 @@ $(function() {
   mask();
   autocomplete();
   rate();
+  datepicker();
 })
+
+function datepicker() {
+  $('[data-picker]').each(function() {
+    var $el = $(this);
+    $el.datepicker({
+      format: $el.data('picker'),
+      language: 'ru-RU'
+    });
+  });
+}
 
 function rate() {
   $('.js-rate').each(function() {

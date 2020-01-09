@@ -10,6 +10,7 @@
     "build": "webpack --mode production && prettier --print-width=120 --parser html --write dist/*.html"
   },
   "dependencies": {
+    "@chenfengyuan/datepicker": "^1.0.9",
     "@fancyapps/fancybox": "^3.5.7",
     "inputmask": "^5.0.1",
     "jquery": "^3.4.1",
