@@ -1,0 +1,51 @@
+<div class="tbl-wrap tbl-wrap_type_mobile">
+  <table class="tbl">
+    <tr class="tbl__tr">
+      <th class="tbl__head">Номер</th>
+      <th class="tbl__head">Товар</th>
+      <th class="tbl__head">Цена</th>
+    </tr>
+
+    <%
+    for (const i in [1, 2, 3]) {
+    %>
+
+      <tr class="tbl__tr <%= i % 2 != 0 ? 'tbl__tr_type_odd' : '' %>">
+        <td class="tbl__cell">
+          <a href="#" class="link"><%= i %></a>
+        </td>
+        <td class="tbl__cell">
+          <a href="#" class="link">Аквариум Tetra Cascade Globe (6,8 л)</a>
+        </td>
+        <td class="tbl__cell">
+          <span class="tbl__value">3 849</span> руб.
+        </td>
+      </tr>
+
+    <% } %>
+
+    <tr class="tbl__tr">
+      <th class="tbl__head"></th>
+      <th class="tbl__head"></th>
+      <th class="tbl__head"></th>
+    </tr>
+    <tr class="tbl__tr">
+      <td class="tbl__cell"></td>
+      <td class="tbl__cell tbl__cell_align_right">
+        Всего:
+      </td>
+      <td class="tbl__cell">
+        <span class="tbl__value">28 229</span> руб.
+      </td>
+    </tr>
+    <tr class="tbl__tr">
+      <td class="tbl__cell tbl__cell_type_total"></td>
+      <td class="tbl__cell tbl__cell_type_total tbl__cell_align_right">
+        Начислено аквабаллов:
+      </td>
+      <td class="tbl__cell tbl__cell_type_total">
+        <span class="tbl__value">846</span>
+      </td>
+    </tr>
+  </table>
+</div>

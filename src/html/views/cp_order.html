@@ -1,0 +1,33 @@
+<%= _.template(require('./../includes/head.html'))() %>
+<%= _.template(require('./../includes/header.html'))() %>
+
+<div class="page__center">
+  <%= _.template(require('./../includes/bc.html'))({list: ['Личный кабинет', 'Заказы']}) %>
+</div>
+
+<div class="page__center">
+
+  <div class="section">
+    <div class="section__head">
+      <h1 class="section__title section__title_size_big">
+        Заказ R489346789
+      </h1>
+      <div class="section__action">
+        <a href="#" class="link link_color_red">отмена</a>
+      </div>
+    </div>
+
+    <div class="page__columns">
+      <div class="page__sidebar">
+        <%= _.template(require('./../includes/cp_sidebar_with_info.html'))(data) %>
+      </div>
+      <div class="page__content">
+        <%= _.template(require('./../includes/cp_order.html'))(data) %>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<%= _.template(require('./../includes/assets.html'))(data) %>
+<%= _.template(require('./../includes/footer.html'))(data) %>
