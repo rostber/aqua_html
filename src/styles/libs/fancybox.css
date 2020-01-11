@@ -880,4 +880,8 @@ body.compensate-for-scrollbar {
     .fancybox-thumbs__list a {
         max-width: calc(100% - 10px);
     }
+    .fancybox-slide--html {
+        padding: 0;
+        background-color: #fff;
+    }
 }
