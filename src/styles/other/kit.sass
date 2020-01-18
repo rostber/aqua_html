@@ -1,0 +1,86 @@
+.kit
+  display: flex
+  flex-wrap: wrap
+
+.kit__i
+  width: 300px
+  min-height: 120px
+  box-sizing: border-box
+  padding: 20px
+  background-color: #fff
+  border-radius: 4px
+  display: flex
+  align-items: center
+
+.kit__preview
+  flex: 0 0 80px
+  margin-right: 20px
+
+.kit__preview-img
+  display: block
+  width: 100%
+
+.kit__content
+  flex: 1
+
+.kit__action
+  margin-bottom: 10px
+
+.kit__info
+  font-size: 16px
+  line-height: 19px
+
+.kit__delimeter, .kit__ammount
+  min-height: 120px
+
+.kit__total-label, .kit__delimeter
+  font-size: 24px
+  line-height: 29px
+  flex: 0 0 40px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.kit__delimeter
+  width: 40px
+
+.kit__ammount
+  display: flex
+  align-items: center
+
+.kit__total
+  display: flex
+  align-items: center
+
+.kit__total-value
+  flex: 1
+  white-space: nowrap
+  font-size: 20px
+  line-height: 24px
+  font-weight: bold
+  margin-right: 30px
+
+.kit__ammount-total, .kit__ammount-action
+  display: inline-block
+  vertical-align: middle
+
+@media screen and (max-width: $width_sm)
+
+  .kit__i
+    width: auto
+    margin: 0 -20px
+
+  .kit__i, .kit__delimeter, .kit__ammount
+    margin-bottom: 10px
+
+  .kit__delimeter, .kit__ammount
+    min-height: 0
+
+  .kit, .kit__delimeter, .kit__total-label, .kit__ammount-action, .kit__ammount-total
+    display: block
+
+  .kit__ammount-total
+    margin-bottom: 15px
+
+  .kit__total-label
+    flex: 0 0 20px

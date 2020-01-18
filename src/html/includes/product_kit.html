@@ -1,0 +1,59 @@
+<div class="section section_border_yes">
+  <div class="section__head">
+    <div class="section__title section__title_sm_align-left">
+      С этим товаром покупают
+    </div>
+  </div>
+  <div class="kit">
+
+    <% var items = ['Аквариум Aquael GLOSSY 120 (260 л)', 'Светильник Биодизайн РИФ 280'] %>
+    <% items.forEach(function(name, index) { %>
+
+      <label class="kit__i">
+        <div class="kit__preview">
+          <a href="#" class="kit__preview-link">
+            <img src="/uploads/offer3.jpg" alt="" class="kit__preview-img" />
+          </a>
+        </div>
+        <div class="kit__content">
+          <div class="kit__action">
+            <div class="control control_type_checkbox">
+              <input type="checkbox" name="kit[]" value="1" class="control__input" /><span
+                class="control__text"
+              >
+              </span>
+            </div>
+          </div>
+          <div class="kit__info">
+            <a href="#" class="link"><%= name %></a>
+          </div>
+        </div>
+      </label>
+
+      <% if (index < items.length - 1) { %>
+
+        <div class="kit__delimeter">+</div>
+
+      <% } %>
+
+    <% }) %>
+
+    <div class="kit__ammount">
+      <div class="kit__ammount-content">
+        <div class="kit__ammount-total">
+          <div class="kit__total">
+            <div class="kit__total-label">=</div>
+            <div class="kit__total-value">54 980 руб.</div>
+          </div>
+        </div>
+        <div class="kit__ammount-action">
+          <button class="btn btn_size_big">
+            <i class="icon-cart btn__icon"></i>
+            В корзину
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

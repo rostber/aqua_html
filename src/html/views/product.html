@@ -23,6 +23,8 @@
     </div>
   </div>
 
+  <%= _.template(require('./../includes/product_kit.html'))() %>
+
   <%= _.template(require('./../includes/product_description.html'))() %>
 
   <%= _.template(require('./../includes/bestsellers.html'))({title: 'Похожие товары'}) %>
