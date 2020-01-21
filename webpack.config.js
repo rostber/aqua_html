@@ -30,12 +30,13 @@ const config = {
   devtool: "source-map",
   mode: "production",
   optimization: {
-    minimizer: [
+    minimize: false
+    /*minimizer: [
       new TerserPlugin({
         sourceMap: true,
         extractComments: true
       })
-    ]
+    ]*/
   },
   module: {
     rules: [
