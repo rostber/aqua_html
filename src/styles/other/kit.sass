@@ -1,86 +1,90 @@
-.kit
-  display: flex
-  flex-wrap: wrap
+.kit__list
+  font-size: 0
+  margin-left: -20px
 
 .kit__i
-  width: 300px
-  min-height: 120px
+  display: inline-block
+  vertical-align: top
+  width: 230px
+  min-height: 200px
   box-sizing: border-box
-  padding: 20px
+  padding: 20px 50px 20px 20px
   background-color: #fff
   border-radius: 4px
+  position: relative
+  margin: 0 0 20px 20px
+
+.kit__preview-link
+  width: 80px
+  height: 80px
   display: flex
   align-items: center
-
-.kit__preview
-  flex: 0 0 80px
-  margin-right: 20px
+  justify-content: center
+  margin-right: 15px
 
 .kit__preview-img
   display: block
-  width: 100%
-
-.kit__content
-  flex: 1
+  max-width: 100%
+  max-height: 100%
 
 .kit__action
-  margin-bottom: 10px
+  position: absolute
+  right: 15px
+  top: 15px
 
 .kit__info
   font-size: 16px
   line-height: 19px
+  margin-bottom: 6px
 
-.kit__delimeter, .kit__ammount
-  min-height: 120px
-
-.kit__total-label, .kit__delimeter
-  font-size: 24px
-  line-height: 29px
-  flex: 0 0 40px
-  display: flex
-  align-items: center
-  justify-content: center
-
-.kit__delimeter
-  width: 40px
+.kit__price
+  font-weight: 800
+  font-size: 18px
+  line-height: 21px
 
 .kit__ammount
+  border: 2px solid #4CAF50
+  padding: 30px 30px
+  border-radius: 4px
+  max-width: 730px
+  box-sizing: border-box
+
+.kit__ammount-row
   display: flex
   align-items: center
 
-.kit__total
-  display: flex
-  align-items: center
-
-.kit__total-value
+.kit__ammount-cell
   flex: 1
-  white-space: nowrap
-  font-size: 20px
-  line-height: 24px
-  font-weight: bold
-  margin-right: 30px
+  padding: 0 10px
+  box-sizing: border-box
 
-.kit__ammount-total, .kit__ammount-action
-  display: inline-block
-  vertical-align: middle
+.kit__ammount-cell_type_action
+  flex: 0 0 270px
+
+.kit__ammount-label
+  font-weight: 500
+  font-size: 15px
+  line-height: 18px
+  color: $color_hint
+
+.kit__ammount-value
+  font-weight: 800
+  font-size: 24px
+  line-height: 29px
 
 @media screen and (max-width: $width_sm)
 
   .kit__i
     width: auto
-    margin: 0 -20px
-
-  .kit__i, .kit__delimeter, .kit__ammount
-    margin-bottom: 10px
-
-  .kit__delimeter, .kit__ammount
-    min-height: 0
-
-  .kit, .kit__delimeter, .kit__total-label, .kit__ammount-action, .kit__ammount-total
     display: block
 
-  .kit__ammount-total
-    margin-bottom: 15px
+  .kit__ammount
+    padding: 18px
 
-  .kit__total-label
-    flex: 0 0 20px
+  .kit__ammount-row
+    display: block
+    margin: -15px 0
+
+  .kit__ammount-cell
+    padding: 0
+    margin: 15px 0

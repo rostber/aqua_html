@@ -1,55 +1,53 @@
 <div class="section section_border_yes">
   <div class="section__head">
     <div class="section__title section__title_sm_align-left">
-      С этим товаром покупают
+      Комплект для старта
     </div>
   </div>
   <div class="kit">
 
-    <% var items = ['Аквариум Aquael GLOSSY 120 (260 л)', 'Светильник Биодизайн РИФ 280'] %>
-    <% items.forEach(function(name, index) { %>
+    <div class="kit__list">
 
-      <label class="kit__i">
-        <div class="kit__preview">
-          <a href="#" class="kit__preview-link">
-            <img src="/uploads/offer3.jpg" alt="" class="kit__preview-img" />
-          </a>
-        </div>
-        <div class="kit__content">
+      <% var items = ['Аквариум Aquael GLOSSY 120 (260 л)', 'Светильник Биодизайн РИФ 280', 'Фильтр рюкзачный Atman HF-0100', 'Prime Галька морская 0,8-3 мм 1 кг/7 штук', 'Растение шелковое Prime Эхинодорус 13 см/5 штук'] %>
+      <% items.forEach(function(name, index) { %>
+
+        <label class="kit__i">
           <div class="kit__action">
-            <div class="control control_type_checkbox">
+            <div class="control control_type_checkbox control_color_invert">
               <input type="checkbox" name="kit[]" value="1" class="control__input" /><span
                 class="control__text"
               >
               </span>
             </div>
           </div>
+          <a href="#" class="kit__preview-link">
+            <img src="/uploads/offer3.jpg" alt="" class="kit__preview-img" />
+          </a>
           <div class="kit__info">
             <a href="#" class="link"><%= name %></a>
           </div>
-        </div>
-      </label>
-
-      <% if (index < items.length - 1) { %>
-
-        <div class="kit__delimeter">+</div>
-
-      <% } %>
-
-    <% }) %>
-
-    <div class="kit__ammount">
-      <div class="kit__ammount-content">
-        <div class="kit__ammount-total">
-          <div class="kit__total">
-            <div class="kit__total-label">=</div>
-            <div class="kit__total-value">54 980 руб.</div>
+          <div class="kit__price">
+            42 250 руб.
           </div>
+        </label>
+
+      <% }) %>
+
+    </div>
+    <div class="kit__ammount">
+      <div class="kit__ammount-row">
+        <div class="kit__ammount-cell">
+          <div class="kit__ammount-label">Цена</div>
+          <div class="kit__ammount-value">52 650 руб.</div>
         </div>
-        <div class="kit__ammount-action">
+        <div class="kit__ammount-cell">
+          <div class="kit__ammount-label">Ваша скидка</div>
+          <div class="kit__ammount-value">3 600 руб.</div>
+        </div>
+        <div class="kit__ammount-cell kit__ammount-cell_type_action">
           <button class="btn btn_size_big">
             <i class="icon-cart btn__icon"></i>
-            В корзину
+            Купить со скидкой
           </button>
         </div>
       </div>
