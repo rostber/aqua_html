@@ -183,8 +183,8 @@ function rangeSlider() {
     });
     slider.on('change', function() {
       var range = slider.get();
-      $elFrom.val(range[0]);
-      $elTo.val(range[1]);
+      $elFrom.val(parseInt(range[0]));
+      $elTo.val(parseInt(range[1]));
     });
 
     var change = function() {
