@@ -25,10 +25,10 @@ $(function() {
     elI: '.js-m-i'
   });
   slider();
+  vSlider();
   oSlider();
   rangeSlider();
   toggleList();
-  offerPictures();
   tooltip();
   fixedBtn();
   qnt();
@@ -141,7 +141,7 @@ function offerPictures() {
   var display = function(index) {
     $('.js-picture-preview').hide().eq(index).show()
   }
-  var $elI = $('.offer-picture__i-preview');
+  var $elI = $('.js-picture-i');
   if ($elI.length == 0) return;
   $elI.on('click mouseenter', function() {
     var index = $elI.index($(this));
@@ -283,6 +283,33 @@ function slider() {
       nextArrow: $(this).find('.js-slider-next')
     });
   });
+}
+
+function vSlider() {
+  $('.js-v-slider').slick({
+    speed: 500,
+    dots: false,
+    vertical: true,
+    verticalSwiping: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    arrows: false,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: widthMd,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: widthSm,
+        settings: 'unslick'
+      }
+    ]
+  }).on('init', offerPictures)
+  offerPictures()
 }
 
 function oSlider() {
