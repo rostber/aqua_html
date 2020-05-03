@@ -128,6 +128,20 @@
 
 @media screen and (max-width: $width_md)
 
+  .cart__i:not(:last-child)
+    margin-bottom: 20px
+    padding-bottom: 20px
+
+  .cart__cell:not(:last-child)
+    margin-right: 20px
+
+  .cart__cell_type_info
+    &, &:not(:last-child)
+      margin-right: 0
+
+  .cart__action-m
+    margin-bottom: 0
+
   .cart__footer
     display: block
 
@@ -135,7 +149,7 @@
     margin: 0 0 20px 0
 
   .cart__price
-    margin: 20px 0
+    margin: 10px 0
 
 @media screen and (max-width: $width_sm)
 

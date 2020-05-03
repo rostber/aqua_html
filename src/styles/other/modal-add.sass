@@ -12,6 +12,9 @@
 .modal-add__head
   display: flex
 
+.modal-add__head-row
+  display: flex
+
 .modal-add__name
   flex: 1
   font-weight: bold
@@ -38,5 +41,11 @@
 
 @media screen and (max-width: $width_md)
 
-  .modal-add__cell_type_preview
-    display: none
+  .modal-add
+    padding: 0
+
+  .modal-add__head-row
+    display: block
+
+  .modal-add__qnt
+    margin-left: 0

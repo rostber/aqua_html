@@ -3,13 +3,16 @@
 
 <div class="hidden">
   <div class="modal js-modal-cart">
-    <div class="modal__title">
+    <div class="modal__title display-lg">
       Добавить товар в корзину
+    </div>
+    <div class="modal__title display-sm display-md">
+      Добавить товар
     </div>
     <div class="modal__content">
 
       <div class="modal-add">
-        <div class="modal-add__cell modal-add__cell_type_preview">
+        <div class="modal-add__cell modal-add__cell_type_preview display-lg">
           <a class="modal-add__preview" href="#">
             <img src="/uploads/offer1.jpg" alt="" class="modal-add__preview-picture" />
           </a>
@@ -17,24 +20,33 @@
 
         <div class="modal-add__cell modal-add__cell_type_content">
           <div class="modal-add__head">
-            <div class="modal-add__name">
-              Аквариум Aquael GLOSSY 120 (260 л)
+            <div class="modal-add__cell modal-add__cell_type_preview display-sm display-md">
+              <a class="modal-add__preview" href="#">
+                <img src="/uploads/offer1.jpg" alt="" class="modal-add__preview-picture" />
+              </a>
             </div>
-            <div class="modal-add__qnt">
-
-              <div class="qnt js-qnt">
-                <div class="qnt__content">
-                  <div class="qnt__minus js-qnt-m">
-                    <i class="icon-minus"></i>
-                  </div>
-                  <div class="qnt__input js-qnt-v" contenteditable="true" data-max="100"></div>
-                  <div class="qnt__plus js-qnt-p">
-                    <i class="icon-plus"></i>
-                  </div>
+            <div class="modal-add__cell">
+              <div class="modal-add__head-row">
+                <div class="modal-add__name">
+                  Аквариум Aquael GLOSSY 120 (260 л)
                 </div>
-                <input type="hidden" name="qnt" value="1" class="js-qnt-i" />
-              </div>
+                <div class="modal-add__qnt">
 
+                  <div class="qnt js-qnt">
+                    <div class="qnt__content">
+                      <div class="qnt__minus js-qnt-m">
+                        <i class="icon-minus"></i>
+                      </div>
+                      <div class="qnt__input js-qnt-v" contenteditable="true" data-max="100"></div>
+                      <div class="qnt__plus js-qnt-p">
+                        <i class="icon-plus"></i>
+                      </div>
+                    </div>
+                    <input type="hidden" name="qnt" value="1" class="js-qnt-i" />
+                  </div>
+
+                </div>
+              </div>
             </div>
           </div>
 
@@ -137,10 +149,18 @@
             <% } %>
 
             <div class="offer-info__cart offer-info__cart_type_modal">
-              <button class="btn btn_size_big">
-                <i class="icon-cart btn__icon"></i>
-                Добавить в корзину
-              </button>
+              <div class="display-lg">
+                <button class="btn btn_size_big">
+                  <i class="icon-cart btn__icon"></i>
+                  Добавить в корзину
+                </button>
+              </div>
+              <div class="display-sm display-md">
+                <button class="btn btn_size_big btn_display_block">
+                  <i class="icon-cart btn__icon"></i>
+                  Добавить в корзину
+                </button>
+              </div>
             </div>
 
           </div>
