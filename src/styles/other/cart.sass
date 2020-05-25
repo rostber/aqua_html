@@ -87,6 +87,7 @@
   color: rgba(201, 201, 201, 0.5)
   font-size: 32px
   transition: all linear 0.2s
+  text-decoration: none
 
   &:hover
     color: $color_blink
@@ -148,6 +149,9 @@
   .cart__footer-action, .cart__footer-cost
     margin: 0 0 20px 0
 
+    &:last-child
+      margin-bottom: 0
+
   .cart__price
     margin: 10px 0
 
@@ -161,3 +165,27 @@
 
     .cart__text
       margin-bottom: 10px
+
+  .cart__footer
+    padding: 20px
+
+  .cart__footer-action, .cart__footer-cost
+    margin: 0 0 10px 0
+
+    &:last-child
+      margin-bottom: 0
+
+  .cart__footer-text
+    border-bottom: 1px solid #DADADA
+    margin-bottom: 10px
+    padding-bottom: 10px
+
+  .cart__const
+    display: flex
+
+  .cart__const-l
+    flex: 0
+
+  .cart__const-r
+    flex: 1
+    text-align: right
